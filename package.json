@@ -1,10 +1,11 @@
 {
   "scripts": {
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "format": "prettier --write ."
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown",
-    "*.{js,css,md}": "prettier --write"
+    "*.{js,css,md,html}": "prettier --write"
   },
   "devDependencies": {
     "husky": "^8.0.1",
