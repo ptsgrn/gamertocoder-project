@@ -1,8 +1,14 @@
 @import url(/css/reset.css);
+@import url(/css/fonts.css);
+
 :root {
   --yellow: rgb(254, 215, 102);
   --yellow-secondary: rgba(254, 215, 102, 0.5);
   --black: #141414;
   --black20: #202020;
   --black28: #282828;
+}
+
+body {
+  font-family: 'LineSeedSansTH', sans-serif;
 }

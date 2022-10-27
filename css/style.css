@@ -71,4 +71,8 @@ nav button {
   display: flex;
   align-items: center;
   padding: 8px;
+}
+
+h1 {
+  font-family: inherit;
 } /*# sourceMappingURL=style.css.map */
