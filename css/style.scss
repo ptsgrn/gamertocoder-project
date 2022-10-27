@@ -9,17 +9,41 @@ nav {
   border: 2px solid var(--yellow);
   background-color: var(--black20);
   padding: 4px;
-  ul {
+  .nav-menu {
+    border-radius: 12px;
+    list-style: none;
+    position: absolute;
+    background-color: var(--black20);
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+    padding: 8px;
+    display: block;
+    li {
+      padding: 8px;
+    }
+    .menu-submenu {
+      border-radius: 12px;
+      margin-top: 8px;
+      background-color: var(--black28);
+      list-style: none;
+    }
+  }
+  .nav-toc {
     border-radius: 8px;
     border: 2px solid var(--yellow);
     margin-left: 4px;
     padding: 4px;
+
     li {
       position: relative;
-      .nav--li--icon {
+
+      .nav-li-icon {
         margin-right: 8px;
       }
-      .li--selected {
+
+      .li-selected {
         border-radius: 8px;
         width: 100%;
         position: absolute;
@@ -27,13 +51,16 @@ nav {
         left: 0;
         background-color: var(--yellow-secondary);
       }
+
       padding: 8px;
       display: flex;
       align-items: center;
     }
+
     list-style: none;
     display: flex;
   }
+
   button {
     border-radius: 8px;
     color: var(--yellow);

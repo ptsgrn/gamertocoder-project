@@ -16,7 +16,28 @@ nav {
   bottom: 0;
   display: flex;
 }
-nav ul {
+nav .nav-menu {
+  border-radius: 12px;
+  list-style: none;
+  position: absolute;
+  background-color: var(--black20);
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translate(-50%);
+  width: 90%;
+  padding: 8px;
+  display: block;
+}
+nav .nav-menu li {
+  padding: 8px;
+}
+nav .nav-menu .menu-submenu {
+  border-radius: 12px;
+  margin-top: 8px;
+  background-color: var(--black28);
+  list-style: none;
+}
+nav .nav-toc {
   border-radius: 8px;
   border: 2px solid var(--yellow);
   margin-left: 4px;
@@ -24,16 +45,16 @@ nav ul {
   list-style: none;
   display: flex;
 }
-nav ul li {
+nav .nav-toc li {
   position: relative;
   padding: 8px;
   display: flex;
   align-items: center;
 }
-nav ul li .nav--li--icon {
+nav .nav-toc li .nav-li-icon {
   margin-right: 8px;
 }
-nav ul li .li--selected {
+nav .nav-toc li .li-selected {
   border-radius: 8px;
   width: 100%;
   position: absolute;

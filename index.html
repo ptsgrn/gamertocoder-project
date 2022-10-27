@@ -11,25 +11,55 @@
       rel="stylesheet" />
     <title>Blockman Go</title>
   </head>
+
   <body>
     <nav>
-      <button>
+      <ul class="nav-menu">
+        <li>
+          <span class="material-symbols-outlined nav-li-icon">Home</span>Home
+        </li>
+        <li>
+          <span class="material-symbols-outlined nav-li-icon">Download</span
+          >Download
+        </li>
+        <li>
+          <span class="material-symbols-outlined nav-li-icon">Forum</span>Forum
+        </li>
+        <li>
+          <span class="material-symbols-outlined nav-li-icon">terminal</span
+          >Mini-game
+        </li>
+        <li>
+          <span class="material-symbols-outlined nav-li-icon">phone</span>
+          Follow Us
+          <ul class="menu-submenu">
+            <li>
+              <span class="material-symbols-outlined nav-li-icon">Home</span
+              >Mini-game
+            </li>
+            <li>
+              <span class="material-symbols-outlined nav-li-icon">Home</span
+              >Mini-game
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <button class="menutoggler-btn">
         <span class="material-symbols-outlined">menu</span>
         Menu
       </button>
-      <ul>
+      <ul class="nav-toc">
         <li>
-          <span class="material-symbols-outlined nav--li--icon">Home</span>
+          <span class="material-symbols-outlined nav-li-icon">Home</span>
           Home
-          <span class="li--selected"></span>
+          <span class="li-selected"></span>
         </li>
         <li>
-          <span class="material-symbols-outlined nav--li--icon">error</span
+          <span class="material-symbols-outlined nav-li-icon">error</span
           >Featured
         </li>
         <li>
-          <span class="material-symbols-outlined nav--li--icon"
-            >announcement</span
+          <span class="material-symbols-outlined nav-li-icon">announcement</span
           >Anoucements
         </li>
       </ul>
@@ -38,4 +68,6 @@
       <h1>Hello</h1>
     </main>
   </body>
+
+  <script src="js/menu.js"></script>
 </html>
