@@ -4,6 +4,10 @@
   transition: all ease 0.2s;
 }
 
+a {
+  text-decoration: none;
+}
+
 nav {
   border-radius: 12px;
   color: var(--yellow);
@@ -43,8 +47,19 @@ nav .nav-toc {
   border: 2px solid var(--yellow);
   margin-left: 4px;
   padding: 4px;
+  position: relative;
   list-style: none;
   display: flex;
+}
+nav .nav-toc .li-selected {
+  border-radius: 8px;
+  position: absolute;
+  height: 100%;
+  background-color: var(--yellow-secondary);
+  opacity: 0;
+}
+nav .nav-toc .active {
+  opacity: 1;
 }
 nav .nav-toc li {
   position: relative;
@@ -55,14 +70,6 @@ nav .nav-toc li {
 nav .nav-toc li .nav-li-icon {
   margin-right: 8px;
 }
-nav .nav-toc li .li-selected {
-  border-radius: 8px;
-  width: 100%;
-  position: absolute;
-  height: 100%;
-  left: 0;
-  background-color: var(--yellow-secondary);
-}
 nav button {
   border-radius: 8px;
   color: var(--yellow);
@@ -71,8 +78,4 @@ nav button {
   display: flex;
   align-items: center;
   padding: 8px;
-}
-
-h1 {
-  font-family: inherit;
 } /*# sourceMappingURL=style.css.map */

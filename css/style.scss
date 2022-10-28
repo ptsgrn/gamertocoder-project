@@ -4,6 +4,10 @@
   transition: all ease 0.2s;
 }
 
+a {
+  text-decoration: none;
+}
+
 nav {
   border-radius: 12px;
   color: var(--yellow);
@@ -36,21 +40,23 @@ nav {
     border: 2px solid var(--yellow);
     margin-left: 4px;
     padding: 4px;
+    position: relative;
 
+    .li-selected {
+      border-radius: 8px;
+      position: absolute;
+      height: 100%;
+      background-color: var(--yellow-secondary);
+      opacity: 0;
+    }
+    .active {
+      opacity: 1;
+    }
     li {
       position: relative;
 
       .nav-li-icon {
         margin-right: 8px;
-      }
-
-      .li-selected {
-        border-radius: 8px;
-        width: 100%;
-        position: absolute;
-        height: 100%;
-        left: 0;
-        background-color: var(--yellow-secondary);
       }
 
       padding: 8px;
