@@ -34,6 +34,11 @@ let toc = [
         'Anoucements',
         '#announcements',
       ],
+      [
+        '<span class="material-symbols-outlined nav-li-icon">download</span>',
+        'Download',
+        '#download',
+      ],
     ],
   ],
   [
