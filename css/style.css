@@ -27,6 +27,7 @@ body {
 
 a {
   color: #5386b1;
+  -webkit-tap-highlight-color: transparent;
 }
 
 footer {

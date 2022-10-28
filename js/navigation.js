@@ -116,6 +116,15 @@ for (var i = 0; i < toc.length; i++) {
   }
 }
 
+let $logo = document.querySelector('.logo')
+function partialHiddenLogo(isPartialHidden) {
+  if (isPartialHidden) {
+    $logo.classList.add('logo--nofocus')
+  } else {
+    $logo.classList.remove('logo--nofocus')
+  }
+}
+
 for (var i = 0; i < menupath.length; i++) {
   let li = document.createElement('li')
   if (menupath[i]['submenu']) {
@@ -219,12 +228,14 @@ function checkTop() {
     setTimeout(() => {
       navgoup.style.transform = 'translateY(0)'
       navgoup.style.opacity = '1'
+      partialHiddenLogo(true)
     }, 1)
   } else {
     navgoup.style.transform = 'translateY(100%)'
     navgoup.style.opacity = '0'
     setTimeout(() => {
       navgoup.style.display = 'none'
+      partialHiddenLogo(false)
     }, 200)
   }
 }
