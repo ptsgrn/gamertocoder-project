@@ -113,16 +113,20 @@ for (var i = 0; i < menupath.length; i++) {
   let li = document.createElement('li')
   if (menupath[i]['submenu']) {
     let button = document.createElement('button')
+    let span = document.createElement('span')
     let div = document.createElement('div')
     let ul = document.createElement('ul')
     let toggle = document.createElement('input')
     ul.className = 'menu-submenu'
     toggle.type = 'checkbox'
     toggle.style.display = 'none'
+    span.className = 'material-symbols-outlined'
+    span.innerHTML = `expand_more`
     button.appendChild(toggle)
 
     toggle.checked = !toggle.checked
     ul.style.transform = 'scale(0)'
+    span.style.transform = `rotate(0deg)`
     ul.style.opacity = '0'
     setTimeout(() => {
       ul.style.display = 'none'
@@ -132,12 +136,14 @@ for (var i = 0; i < menupath.length; i++) {
       toggle.checked = !toggle.checked
 
       if (toggle.checked) {
+        span.style.transform = `rotate(0deg)`
         ul.style.transform = 'scale(0)'
         ul.style.opacity = '0'
         setTimeout(() => {
           ul.style.display = 'none'
         }, 200)
       } else {
+        span.style.transform = `rotate(180deg)`
         ul.style.display = 'block'
         setTimeout(() => {
           ul.style.transform = 'scale(1)'
@@ -157,6 +163,7 @@ for (var i = 0; i < menupath.length; i++) {
     div.innerHTML = `${menupath[i]['icon']}<p>${menupath[i]['text']}</p>`
     button.className = 'submenu-btn'
     button.appendChild(div)
+    button.appendChild(span)
     li.appendChild(button)
     li.appendChild(ul)
   } else {

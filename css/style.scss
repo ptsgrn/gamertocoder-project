@@ -33,7 +33,6 @@ nav {
     width: 90vw;
     padding: 8px;
     display: block;
-
     li {
       padding: 12px;
       a {
@@ -54,6 +53,10 @@ nav {
       margin: 0;
       border: none;
       background: transparent;
+      span:last-child {
+        position: absolute;
+        right: 16px;
+      }
     }
     .menu-submenu {
       overflow: hidden;

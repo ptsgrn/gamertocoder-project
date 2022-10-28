@@ -55,6 +55,10 @@ nav .nav-menu .submenu-btn {
   border: none;
   background: transparent;
 }
+nav .nav-menu .submenu-btn span:last-child {
+  position: absolute;
+  right: 16px;
+}
 nav .nav-menu .menu-submenu {
   overflow: hidden;
   border-radius: 12px;
