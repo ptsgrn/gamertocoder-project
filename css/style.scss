@@ -14,6 +14,13 @@ nav {
   border: 2px solid var(--yellow);
   background-color: var(--black20);
   padding: 4px;
+  left: 50%;
+  margin-bottom: 32px;
+  transform: translateX(-50%);
+  position: fixed;
+  bottom: 0;
+  display: flex;
+
   .nav-menu {
     border-radius: 12px;
     list-style: none;
@@ -27,7 +34,7 @@ nav {
     padding: 8px;
     display: block;
     li {
-      padding: 8px;
+      padding: 12px;
     }
     .menu-submenu {
       border-radius: 12px;
@@ -53,9 +60,9 @@ nav {
     .active {
       opacity: 1;
     }
-    li {
+    a {
       position: relative;
-
+      color: var(--yellow);
       .nav-li-icon {
         margin-right: 8px;
       }
@@ -78,13 +85,6 @@ nav {
     align-items: center;
     padding: 8px;
   }
-
-  left: 50%;
-  margin-bottom: 32px;
-  transform: translateX(-50%);
-  position: fixed;
-  bottom: 0;
-  display: flex;
 }
 
 $breakpoint-tablet: 768px;
@@ -92,6 +92,11 @@ $breakpoint-tablet: 768px;
   nav {
     .nav-toc {
       display: none;
+    }
+    .nav-menu {
+      li {
+        padding: 12px;
+      }
     }
   }
 }

@@ -4,8 +4,13 @@
 let menutoggler = document.querySelector('.menutoggler-btn')
 let menuul = document.querySelector('.nav-menu')
 let navtoc = document.querySelector('.nav-toc')
-let navtocli = navtoc.querySelectorAll('li')
+let navtocli = navtoc.querySelectorAll('a')
 let navtocSelected = navtoc.querySelector('.li-selected')
+
+let menuicon = document.querySelector(
+  '.menutoggler-btn .material-symbols-outlined'
+)
+
 let menustate = true
 
 let initalpath = 'Home'
@@ -48,18 +53,65 @@ let toc = [
   ],
 ]
 
+let menupath = [
+  {
+    icon: '<span class="material-symbols-outlined nav-li-icon">Home</span>',
+    text: 'Home',
+    href: '/home',
+  },
+  {
+    icon: '<span class="material-symbols-outlined nav-li-icon">Download</span>',
+    text: 'Download',
+    href: '/download',
+  },
+  {
+    icon: '<span class="material-symbols-outlined nav-li-icon">Forum</span>',
+    text: 'Forum',
+    href: '/forum',
+  },
+  {
+    icon: '<span class="material-symbols-outlined nav-li-icon">terminal</span>',
+    text: 'Mini-game',
+    href: '/',
+  },
+  {
+    icon: '<span class="material-symbols-outlined nav-li-icon">phone</span>',
+    text: 'Follow Us',
+    submenu: [
+      {
+        icon: '',
+        text: 'Facebook',
+        href: '',
+      },
+      {
+        icon: '',
+        text: 'Instragram',
+        href: '',
+      },
+      {
+        icon: '',
+        text: 'TikTok',
+        href: '',
+      },
+    ],
+  },
+]
+
 // initial
 menuMenipulate(true)
 for (var i = 0; i < toc.length; i++) {
   if (currentpath == toc[i][0]) {
     toc[i][1].forEach(item => {
-      let li = document.createElement('li')
-      li.innerHTML = `${item[0]} ${item[1]}`
-      navtoc.appendChild(li)
+      let a = document.createElement('a')
+      a.innerHTML = `${item[0]} ${item[1]}`
+      a.href = item[3]
+      navtoc.appendChild(a)
     })
   }
 }
-navtocli = navtoc.querySelectorAll('li')
+navtocli = navtoc.querySelectorAll('a')
+
+for (var i = 0; i < menupath.length; i++) {}
 
 // function
 function menuMenipulate(bool) {
@@ -68,20 +120,24 @@ function menuMenipulate(bool) {
     menuul.style.bottom = `-10%`
     menuul.style.opacity = `0`
     setTimeout(() => {
+      menuicon.style.opacity = '0'
+    }, 100)
+    setTimeout(() => {
       menuul.style.display = 'none'
+      menuicon.innerHTML = 'menu'
+      menuicon.style.opacity = '1'
     }, 200)
-    document.querySelector(
-      '.menutoggler-btn .material-symbols-outlined'
-    ).innerHTML = 'menu'
   } else {
     menuul.style.display = 'block'
     setTimeout(() => {
       menuul.style.bottom = `calc(100% + 8px)`
       menuul.style.opacity = `1`
+      menuicon.style.opacity = '0'
     }, 1)
-    document.querySelector(
-      '.menutoggler-btn .material-symbols-outlined'
-    ).innerHTML = 'close'
+    setTimeout(() => {
+      menuicon.style.opacity = '1'
+      menuicon.innerHTML = 'close'
+    }, 200)
   }
 }
 
@@ -90,7 +146,6 @@ navtocli.forEach(element => {
   element.addEventListener('mouseover', () => {
     navtocSelected.classList.add('active')
     let posision = element.getBoundingClientRect()
-    console.log(posision.x)
     navtocSelected.style.left =
       posision.x - navtoc.getBoundingClientRect().x + 'px'
     navtocSelected.style.width = posision.width + 'px'

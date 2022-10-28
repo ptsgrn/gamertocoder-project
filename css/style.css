@@ -35,7 +35,7 @@ nav .nav-menu {
   display: block;
 }
 nav .nav-menu li {
-  padding: 8px;
+  padding: 12px;
 }
 nav .nav-menu .menu-submenu {
   border-radius: 12px;
@@ -62,13 +62,14 @@ nav .nav-toc .li-selected {
 nav .nav-toc .active {
   opacity: 1;
 }
-nav .nav-toc li {
+nav .nav-toc a {
   position: relative;
+  color: var(--yellow);
   padding: 8px;
   display: flex;
   align-items: center;
 }
-nav .nav-toc li .nav-li-icon {
+nav .nav-toc a .nav-li-icon {
   margin-right: 8px;
 }
 nav button {
@@ -84,5 +85,8 @@ nav button {
 @media (max-width: 768px) {
   nav .nav-toc {
     display: none;
+  }
+  nav .nav-menu li {
+    padding: 12px;
   }
 }
