@@ -156,7 +156,7 @@ nav .nav--primary-btn:hover {
   background-color: var(--yellow);
   position: relative;
 }
-.main-title .section-maintitle {
+.main-title .div-maintitle {
   display: block;
   position: absolute;
   right: 10vw;
@@ -166,21 +166,21 @@ nav .nav--primary-btn:hover {
   transform: translateY(-50%);
   width: 50%;
 }
-.main-title .section-maintitle .maintitle--action {
+.main-title .div-maintitle .maintitle--action {
   text-align: right;
   margin-top: 32px;
   right: 0;
 }
-.main-title .section-maintitle .maintitle--action .primary-btn {
+.main-title .div-maintitle .maintitle--action .primary-btn {
   width: 128px;
   font-size: 24px;
 }
-.main-title .section-maintitle .maintitle--action .secondary-btn {
+.main-title .div-maintitle .maintitle--action .secondary-btn {
   margin-top: 8px;
   width: 128px;
   font-size: 24px;
 }
-.main-title .section-maintitle h1 {
+.main-title .div-maintitle h1 {
   text-align: right;
   font-weight: 600;
   font-size: 3rem;
@@ -193,15 +193,15 @@ nav .nav--primary-btn:hover {
   nav .nav-menu li {
     padding: 12px;
   }
-  .main-title .section-maintitle {
+  .main-title .div-maintitle {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  .main-title .section-maintitle h1 {
+  .main-title .div-maintitle h1 {
     text-align: center;
   }
-  .main-title .section-maintitle .maintitle--action {
+  .main-title .div-maintitle .maintitle--action {
     text-align: center;
   }
 }
