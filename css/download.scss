@@ -1,0 +1,83 @@
+@import './base.scss';
+
+body {
+  background-color: $black;
+}
+
+.hero-header {
+  width: 100%;
+  background-image: url(/images/banner-01.png);
+  background-size: 1600px;
+  background-position: center center;
+  height: 100vh;
+  position: relative;
+  max-height: 700px;
+
+  &__overlay-text {
+    position: absolute;
+    color: var(--white);
+    text-align: right;
+    top: 50%;
+    right: 48px;
+
+    h1 {
+      display: inline;
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 0;
+      background-color: $yellow;
+      white-space: pre-wrap;
+      padding-left: 0px;
+      line-height: 1.5em;
+      box-shadow: -8px 0 0 $yellow, 8px 0 0 $yellow;
+      margin-bottom: 32px;
+    }
+
+    .download-button-group {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 8px;
+
+      .download-button {
+        position: relative;
+        display: grid;
+        grid-template:
+          'icon text' 1em
+          'icon platform' 1fr / 48px auto;
+        width: 200px;
+        padding: 8px;
+        background-color: $black;
+        border-radius: 12px;
+        text-decoration: none;
+
+        &__icon {
+          position: absolute;
+          grid-area: icon;
+          width: 32px;
+          height: 32px;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        span {
+          grid-area: text;
+          align-items: center;
+          font-size: 0.7rem;
+          position: absolute;
+          top: 25%;
+          color: $yellow;
+          padding-left: 4px;
+        }
+
+        strong {
+          grid-area: platform;
+          font-size: 1.3rem;
+          font-weight: 600;
+          color: $yellow;
+          padding-left: 4px;
+        }
+      }
+    }
+  }
+}

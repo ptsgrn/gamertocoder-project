@@ -1,0 +1,97 @@
+@import url(/css/reset.css);
+@import url(/css/fonts.css);
+
+// variable
+$yellow: rgb(254, 215, 102);
+$yellow-secondary: rgba(254, 215, 102, 0.5);
+$black: #141414;
+$black20: #202020;
+$black28: #282828;
+$blue-100: #c6cef2;
+$blue-150: #72bcd5;
+$blue-300: #63a0d7;
+$blue-500: #5386b1;
+$blue-600: #4358a7;
+$blue-700: #1c3667;
+$blue-800: #1a2e5a;
+$blue-900: #061123;
+
+:root {
+  --yellow: rgb(254, 215, 102);
+  --yellow-secondary: rgba(254, 215, 102, 0.5);
+  --black: #141414;
+  --black20: #202020;
+  --black28: #282828;
+  --blue-100: #c6cef2;
+  --blue-150: #72bcd5;
+  --blue-300: #63a0d7;
+  --blue-500: #5386b1;
+  --blue-600: #4358a7;
+  --blue-700: #1c3667;
+  --blue-800: #1a2e5a;
+  --blue-900: #061123;
+}
+
+body {
+  font-family: 'LineSeedSansTH', sans-serif;
+}
+
+a {
+  color: $blue-500;
+}
+
+footer {
+  padding: 20px 0;
+
+  .footer {
+    &__credits,
+    &__copy {
+      color: $blue-100;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      font-size: 0.8rem;
+
+      span {
+        margin: 0 5px;
+        display: block;
+      }
+    }
+  }
+}
+
+.logo {
+  position: fixed;
+  padding: 24px 8px 8px 8px;
+  background-color: $blue-900;
+  left: 64px;
+  cursor: pointer;
+  border-radius: 0 0 12px 12px;
+  transition-property: background-color, padding;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  z-index: 100;
+
+  &.logo--nofocus {
+    background-color: rgba($color: $blue-900, $alpha: 0.7);
+    padding: 8px;
+
+    &:hover {
+      padding-top: 24px;
+      background-color: rgba($color: $blue-900, $alpha: 1);
+    }
+  }
+
+  &:active {
+    padding-top: 28px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .logo {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
