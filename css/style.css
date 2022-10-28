@@ -61,11 +61,11 @@ footer .footer__copy span {
   transition-timing-function: ease-in-out;
   z-index: 100;
 }
-.logo.logo--nofocus {
+.logo.logo--partial-hidden {
   background-color: rgba(6, 17, 35, 0.7);
   padding: 8px;
 }
-.logo.logo--nofocus:hover {
+.logo.logo--partial-hidden:hover {
   padding-top: 24px;
   background-color: #061123;
 }

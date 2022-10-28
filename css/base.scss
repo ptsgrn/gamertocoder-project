@@ -81,7 +81,7 @@ footer {
   transition-timing-function: ease-in-out;
   z-index: 100;
 
-  &.logo--nofocus {
+  &.logo--partial-hidden {
     background-color: rgba($color: $blue-900, $alpha: 0.7);
     padding: 8px;
 
