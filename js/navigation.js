@@ -118,11 +118,9 @@ for (var i = 0; i < toc.length; i++) {
 
 let $logo = document.querySelector('.logo')
 function partialHiddenLogo(isPartialHidden) {
-  if (isPartialHidden) {
-    $logo.classList.add('logo--nofocus')
-  } else {
-    $logo.classList.remove('logo--nofocus')
-  }
+  isPartialHidden
+    ? $logo.classList.add('logo--partial-hidden')
+    : $logo.classList.remove('logo--partial-hidden')
 }
 
 for (var i = 0; i < menupath.length; i++) {
@@ -196,9 +194,9 @@ for (var i = 0; i < menupath.length; i++) {
 navtocli = navtoc.querySelectorAll('a')
 
 // function
-function menuMenipulate(bool) {
+function menuMenipulate(isOpen) {
   menustate = !menustate
-  if (bool) {
+  if (isOpen) {
     navmenu.style.bottom = `-10%`
     navmenu.style.opacity = `0`
     setTimeout(() => {
@@ -260,11 +258,7 @@ document.addEventListener('click', event => {
   menuMenipulate(true)
 })
 menutoggler.addEventListener('click', () => {
-  if (menustate) {
-    menuMenipulate(true)
-  } else {
-    menuMenipulate(false)
-  }
+  menuMenipulate(menustate)
 })
 
 navgoup.addEventListener('click', () => {
