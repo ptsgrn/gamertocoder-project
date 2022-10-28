@@ -32,8 +32,12 @@ $blue-900: #061123;
   --blue-900: #061123;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: 'LineSeedSansTH', sans-serif;
+  background-color: $black;
 }
 
 a {

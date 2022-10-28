@@ -16,13 +16,13 @@
   --blue-900: #061123;
 }
 
-body {
-  font-family: 'LineSeedSansTH', sans-serif;
-  background: var(--black);
-}
-
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'LineSeedSansTH', sans-serif;
+  background-color: #141414;
 }
 
 a {
