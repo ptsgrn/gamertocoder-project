@@ -72,7 +72,7 @@ footer .footer__copy span {
   padding-top: 28px;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
   .logo {
     left: 50%;
     transform: translateX(-50%);

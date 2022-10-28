@@ -1,3 +1,4 @@
+@import './base.scss';
 * {
   padding: 0;
   margin: 0;
@@ -195,7 +196,6 @@ nav {
   }
 }
 
-$breakpoint-tablet: 768px;
 @media (max-width: $breakpoint-tablet) {
   nav {
     .nav-toc {

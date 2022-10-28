@@ -16,6 +16,8 @@ $blue-700: #1c3667;
 $blue-800: #1a2e5a;
 $blue-900: #061123;
 
+// breakpoints
+$breakpoint-tablet: 768px;
 :root {
   --yellow: rgb(254, 215, 102);
   --yellow-secondary: rgba(254, 215, 102, 0.5);
@@ -93,7 +95,7 @@ footer {
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: $breakpoint-tablet) {
   .logo {
     left: 50%;
     transform: translateX(-50%);
