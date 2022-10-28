@@ -4,11 +4,30 @@
   transition: all ease 0.2s;
 }
 
+.primary-btn {
+  border: none;
+  border-radius: 12px;
+  padding: 8px;
+  border: 2px solid var(--black20);
+  background-color: var(--black20);
+  color: var(--yellow);
+}
+
+.secondary-btn {
+  border: none;
+  border-radius: 12px;
+  padding: 8px;
+  border: 2px solid var(--black20);
+  background-color: var(--yellow);
+  color: var(--black20);
+}
+
 a {
   text-decoration: none;
 }
 
 nav {
+  z-index: 100000;
   border-radius: 12px;
   color: var(--yellow);
   border: 2px solid var(--yellow);
@@ -35,6 +54,8 @@ nav .nav-menu {
   display: block;
 }
 nav .nav-menu li {
+  border: 4px solid transparent;
+  border-radius: 8px;
   padding: 12px;
 }
 nav .nav-menu li a {
@@ -46,6 +67,13 @@ nav .nav-menu li div {
 }
 nav .nav-menu li div p {
   margin-left: 8px;
+}
+nav .nav-menu li:hover {
+  transition: all ease 0.2s;
+  border: 4px solid var(--yellow-secondary);
+}
+nav .nav-menu li:hover .menu-submenu li {
+  border: 4px solid transparent;
 }
 nav .nav-menu .submenu-btn {
   border-radius: 0;
@@ -63,7 +91,7 @@ nav .nav-menu .menu-submenu {
   overflow: hidden;
   border-radius: 12px;
   margin-top: 8px;
-  box-shadow: 0 4px 10px var(--yellow-secondary);
+  border: 4px solid var(--yellow-secondary);
   background-color: var(--black28);
   list-style: none;
 }
@@ -111,6 +139,41 @@ nav button {
   display: flex;
   align-items: center;
   padding: 8px;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--yellow);
+  position: relative;
+}
+section .section-maintitle {
+  display: block;
+  position: absolute;
+  right: 10vw;
+  align-items: right;
+  justify-items: right;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50%;
+}
+section .section-maintitle .maintitle--action {
+  text-align: right;
+  margin-top: 32px;
+  right: 0;
+}
+section .section-maintitle .maintitle--action .primary-btn {
+  width: 128px;
+  font-size: 24px;
+}
+section .section-maintitle .maintitle--action .secondary-btn {
+  width: 128px;
+  font-size: 24px;
+}
+section .section-maintitle h1 {
+  text-align: right;
+  font-weight: 600;
+  font-size: 3rem;
 }
 
 @media (max-width: 768px) {
