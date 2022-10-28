@@ -1,5 +1,5 @@
-@import url(/css/reset.css);
-@import url(/css/fonts.css);
+@import './reset.css';
+@import './fonts.css';
 :root {
   --yellow: rgb(254, 215, 102);
   --yellow-secondary: rgba(254, 215, 102, 0.5);
@@ -16,12 +16,18 @@
   --blue-900: #061123;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'LineSeedSansTH', sans-serif;
+  background-color: #141414;
 }
 
 a {
   color: #5386b1;
+  -webkit-tap-highlight-color: transparent;
 }
 
 footer {
@@ -55,11 +61,11 @@ footer .footer__copy span {
   transition-timing-function: ease-in-out;
   z-index: 100;
 }
-.logo.logo--nofocus {
+.logo.logo--partial-hidden {
   background-color: rgba(6, 17, 35, 0.7);
   padding: 8px;
 }
-.logo.logo--nofocus:hover {
+.logo.logo--partial-hidden:hover {
   padding-top: 24px;
   background-color: #061123;
 }
@@ -67,7 +73,7 @@ footer .footer__copy span {
   padding-top: 28px;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
   .logo {
     left: 50%;
     transform: translateX(-50%);
@@ -81,10 +87,20 @@ body {
   width: 100%;
   background-image: url(/images/banner-01.png);
   background-size: 1600px;
-  background-position: center center;
+  background-position: 50% center;
   height: 100vh;
   position: relative;
   max-height: 700px;
+  -webkit-animation-name: bg-slide;
+  animation-name: bg-slide;
+  -webkit-animation-duration: 10s;
+  animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
 }
 .hero-header__overlay-text {
   position: absolute;
@@ -103,11 +119,12 @@ body {
   padding-left: 0px;
   line-height: 1.5em;
   box-shadow: -8px 0 0 rgb(254, 215, 102), 8px 0 0 rgb(254, 215, 102);
-  margin-bottom: 32px;
 }
 .hero-header__overlay-text .download-button-group {
+  margin-top: 24px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
   grid-gap: 8px;
 }
 .hero-header__overlay-text .download-button-group .download-button {
@@ -119,6 +136,7 @@ body {
   background-color: #141414;
   border-radius: 12px;
   text-decoration: none;
+  text-align: left;
 }
 .hero-header__overlay-text .download-button-group .download-button__icon {
   position: absolute;
@@ -144,4 +162,26 @@ body {
   font-weight: 600;
   color: rgb(254, 215, 102);
   padding-left: 4px;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-header__overlay-text .download-button-group {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: end;
+  }
+  .hero-header__overlay-text .download-button-group .download-button {
+    width: 100%;
+    justify-self: end;
+  }
+}
+@-webkit-keyframes bg-slide {
+  100% {
+    background-position: 30% center;
+  }
+}
+@keyframes bg-slide {
+  100% {
+    background-position: 30% center;
+  }
 }
