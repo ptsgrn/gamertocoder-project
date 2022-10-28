@@ -1,5 +1,5 @@
-@import url(/css/reset.css);
-@import url(/css/fonts.css);
+@import './reset.css';
+@import './fonts.css';
 :root {
   --yellow: rgb(254, 215, 102);
   --yellow-secondary: rgba(254, 215, 102, 0.5);
