@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      async function init() {
+        let $results = document.querySelector('#results')
+        let data = await (
+          await fetch('https://gamertocoder.garena.co.th/api/assets').catch(
+            console.error
+          )
+        ).json()
+        $results.innerHTML = JSON.stringify(data, null, 2)
+      }
+      window.onload = init
+    </script>
+  </head>
+
+  <body>
+    <pre id="results"></pre>
+  </body>
+</html>
