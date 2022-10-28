@@ -2,7 +2,7 @@
 
 // object variable
 let menutoggler = document.querySelector('.menutoggler-btn')
-let menuul = document.querySelector('.nav-menu')
+let navmenu = document.querySelector('.nav-menu')
 let navtoc = document.querySelector('.nav-toc')
 let navtocli = navtoc.querySelectorAll('a')
 let navtocSelected = navtoc.querySelector('.li-selected')
@@ -52,7 +52,6 @@ let toc = [
     ],
   ],
 ]
-
 let menupath = [
   {
     icon: '<span class="material-symbols-outlined nav-li-icon">Home</span>',
@@ -79,17 +78,17 @@ let menupath = [
     text: 'Follow Us',
     submenu: [
       {
-        icon: '',
+        icon: '<span class="material-symbols-outlined nav-li-icon">phone</span>',
         text: 'Facebook',
         href: '',
       },
       {
-        icon: '',
+        icon: '<span class="material-symbols-outlined nav-li-icon">phone</span>',
         text: 'Instragram',
         href: '',
       },
       {
-        icon: '',
+        icon: '<span class="material-symbols-outlined nav-li-icon">phone</span>',
         text: 'TikTok',
         href: '',
       },
@@ -104,34 +103,94 @@ for (var i = 0; i < toc.length; i++) {
     toc[i][1].forEach(item => {
       let a = document.createElement('a')
       a.innerHTML = `${item[0]} ${item[1]}`
-      a.href = item[3]
+      a.href = item[2]
       navtoc.appendChild(a)
     })
   }
 }
-navtocli = navtoc.querySelectorAll('a')
 
-for (var i = 0; i < menupath.length; i++) {}
+for (var i = 0; i < menupath.length; i++) {
+  let li = document.createElement('li')
+  if (menupath[i]['submenu']) {
+    let button = document.createElement('button')
+    let div = document.createElement('div')
+    let ul = document.createElement('ul')
+    let toggle = document.createElement('input')
+    ul.className = 'menu-submenu'
+    toggle.type = 'checkbox'
+    toggle.style.display = 'none'
+    button.appendChild(toggle)
+
+    toggle.checked = !toggle.checked
+    ul.style.transform = 'scale(0)'
+    ul.style.opacity = '0'
+    setTimeout(() => {
+      ul.style.display = 'none'
+    }, 200)
+
+    button.addEventListener('click', () => {
+      toggle.checked = !toggle.checked
+
+      if (toggle.checked) {
+        ul.style.transform = 'scale(0)'
+        ul.style.opacity = '0'
+        setTimeout(() => {
+          ul.style.display = 'none'
+        }, 200)
+      } else {
+        ul.style.display = 'block'
+        setTimeout(() => {
+          ul.style.transform = 'scale(1)'
+          ul.style.opacity = '1'
+        }, 1)
+      }
+    })
+
+    menupath[i]['submenu'].forEach(item => {
+      let a = document.createElement('a')
+      let li1 = document.createElement('li')
+      a.href = item['href']
+      li1.innerHTML = `${item['icon']}<p>${item['text']}</p>`
+      a.appendChild(li1)
+      ul.appendChild(a)
+    })
+    div.innerHTML = `${menupath[i]['icon']}<p>${menupath[i]['text']}</p>`
+    button.className = 'submenu-btn'
+    button.appendChild(div)
+    li.appendChild(button)
+    li.appendChild(ul)
+  } else {
+    let a = document.createElement('a')
+    let div = document.createElement('div')
+    div.innerHTML = `${menupath[i]['icon']}<p>${menupath[i]['text']}</p>`
+    a.href = menupath[i]['href']
+    a.appendChild(div)
+    li.appendChild(a)
+  }
+  navmenu.appendChild(li)
+}
+
+navtocli = navtoc.querySelectorAll('a')
 
 // function
 function menuMenipulate(bool) {
   menustate = !menustate
   if (bool) {
-    menuul.style.bottom = `-10%`
-    menuul.style.opacity = `0`
+    navmenu.style.bottom = `-10%`
+    navmenu.style.opacity = `0`
     setTimeout(() => {
       menuicon.style.opacity = '0'
     }, 100)
     setTimeout(() => {
-      menuul.style.display = 'none'
+      navmenu.style.display = 'none'
       menuicon.innerHTML = 'menu'
       menuicon.style.opacity = '1'
     }, 200)
   } else {
-    menuul.style.display = 'block'
+    navmenu.style.display = 'block'
     setTimeout(() => {
-      menuul.style.bottom = `calc(100% + 8px)`
-      menuul.style.opacity = `1`
+      navmenu.style.bottom = `calc(100% + 8px)`
+      navmenu.style.opacity = `1`
       menuicon.style.opacity = '0'
     }, 1)
     setTimeout(() => {

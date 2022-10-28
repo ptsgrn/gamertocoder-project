@@ -33,14 +33,42 @@ nav {
     width: 90vw;
     padding: 8px;
     display: block;
+
     li {
       padding: 12px;
+      a {
+        color: var(--yellow);
+      }
+      div {
+        display: flex;
+        align-items: center;
+        p {
+          margin-left: 8px;
+        }
+      }
+    }
+    .submenu-btn {
+      border-radius: 0;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      border: none;
+      background: transparent;
     }
     .menu-submenu {
+      overflow: hidden;
       border-radius: 12px;
       margin-top: 8px;
+      box-shadow: 0 4px 10px var(--yellow-secondary);
       background-color: var(--black28);
       list-style: none;
+      li {
+        display: flex;
+        align-items: center;
+        p {
+          padding-left: 8px;
+        }
+      }
     }
   }
   .nav-toc {

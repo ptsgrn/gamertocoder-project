@@ -37,11 +37,38 @@ nav .nav-menu {
 nav .nav-menu li {
   padding: 12px;
 }
+nav .nav-menu li a {
+  color: var(--yellow);
+}
+nav .nav-menu li div {
+  display: flex;
+  align-items: center;
+}
+nav .nav-menu li div p {
+  margin-left: 8px;
+}
+nav .nav-menu .submenu-btn {
+  border-radius: 0;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
+}
 nav .nav-menu .menu-submenu {
+  overflow: hidden;
   border-radius: 12px;
   margin-top: 8px;
+  box-shadow: 0 4px 10px var(--yellow-secondary);
   background-color: var(--black28);
   list-style: none;
+}
+nav .nav-menu .menu-submenu li {
+  display: flex;
+  align-items: center;
+}
+nav .nav-menu .menu-submenu li p {
+  padding-left: 8px;
 }
 nav .nav-toc {
   border-radius: 8px;
