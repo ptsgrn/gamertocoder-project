@@ -1,12 +1,19 @@
 @import url(/css/reset.css);
 @import url(/css/fonts.css);
-
 :root {
   --yellow: rgb(254, 215, 102);
   --yellow-secondary: rgba(254, 215, 102, 0.5);
   --black: #141414;
   --black20: #202020;
   --black28: #282828;
+  --blue-100: #c6cef2;
+  --blue-150: #72bcd5;
+  --blue-300: #63a0d7;
+  --blue-500: #5386b1;
+  --blue-600: #4358a7;
+  --blue-700: #1c3667;
+  --blue-800: #1a2e5a;
+  --blue-900: #061123;
 }
 
 body {
@@ -16,4 +23,58 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+a {
+  color: #5386b1;
+}
+
+footer {
+  padding: 20px 0;
+}
+footer .footer__credits,
+footer .footer__copy {
+  color: #c6cef2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  font-size: 0.8rem;
+}
+footer .footer__credits span,
+footer .footer__copy span {
+  margin: 0 5px;
+  display: block;
+}
+
+.logo {
+  position: fixed;
+  padding: 24px 8px 8px 8px;
+  background-color: #061123;
+  left: 64px;
+  cursor: pointer;
+  border-radius: 0 0 12px 12px;
+  transition-property: background-color, padding;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  z-index: 100;
+}
+.logo.logo--nofocus {
+  background-color: rgba(6, 17, 35, 0.7);
+  padding: 8px;
+}
+.logo.logo--nofocus:hover {
+  padding-top: 24px;
+  background-color: #061123;
+}
+.logo:active {
+  padding-top: 28px;
+}
+
+@media screen and (max-width: 425px) {
+  .logo {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
