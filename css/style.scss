@@ -30,6 +30,7 @@ nav {
   border-radius: 12px;
   color: var(--yellow);
   border: 2px solid var(--yellow);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   background-color: var(--black20);
   padding: 4px;
   left: 50%;
@@ -40,6 +41,7 @@ nav {
   display: flex;
 
   .nav-menu {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border-radius: 12px;
     list-style: none;
     position: absolute;
@@ -136,6 +138,10 @@ nav {
     display: flex;
   }
 
+  .nav-goup {
+    margin-left: 4px;
+  }
+
   button {
     border-radius: 8px;
     color: var(--yellow);
@@ -145,9 +151,13 @@ nav {
     align-items: center;
     padding: 8px;
   }
+  .nav--primary-btn:hover {
+    color: var(--black20);
+    background-color: var(--yellow);
+  }
 }
 
-section {
+.main-title {
   width: 100%;
   height: 100vh;
   background-color: var(--yellow);
@@ -172,6 +182,7 @@ section {
         font-size: 24px;
       }
       .secondary-btn {
+        margin-top: 8px;
         width: 128px;
         font-size: 24px;
       }
@@ -193,6 +204,20 @@ $breakpoint-tablet: 768px;
     .nav-menu {
       li {
         padding: 12px;
+      }
+    }
+  }
+
+  .main-title {
+    .section-maintitle {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      h1 {
+        text-align: center;
+      }
+      .maintitle--action {
+        text-align: center;
       }
     }
   }

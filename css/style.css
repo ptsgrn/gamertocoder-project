@@ -31,6 +31,7 @@ nav {
   border-radius: 12px;
   color: var(--yellow);
   border: 2px solid var(--yellow);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   background-color: var(--black20);
   padding: 4px;
   left: 50%;
@@ -41,6 +42,7 @@ nav {
   display: flex;
 }
 nav .nav-menu {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   border-radius: 12px;
   list-style: none;
   position: absolute;
@@ -131,6 +133,9 @@ nav .nav-toc a {
 nav .nav-toc a .nav-li-icon {
   margin-right: 8px;
 }
+nav .nav-goup {
+  margin-left: 4px;
+}
 nav button {
   border-radius: 8px;
   color: var(--yellow);
@@ -140,14 +145,18 @@ nav button {
   align-items: center;
   padding: 8px;
 }
+nav .nav--primary-btn:hover {
+  color: var(--black20);
+  background-color: var(--yellow);
+}
 
-section {
+.main-title {
   width: 100%;
   height: 100vh;
   background-color: var(--yellow);
   position: relative;
 }
-section .section-maintitle {
+.main-title .section-maintitle {
   display: block;
   position: absolute;
   right: 10vw;
@@ -157,20 +166,21 @@ section .section-maintitle {
   transform: translateY(-50%);
   width: 50%;
 }
-section .section-maintitle .maintitle--action {
+.main-title .section-maintitle .maintitle--action {
   text-align: right;
   margin-top: 32px;
   right: 0;
 }
-section .section-maintitle .maintitle--action .primary-btn {
+.main-title .section-maintitle .maintitle--action .primary-btn {
   width: 128px;
   font-size: 24px;
 }
-section .section-maintitle .maintitle--action .secondary-btn {
+.main-title .section-maintitle .maintitle--action .secondary-btn {
+  margin-top: 8px;
   width: 128px;
   font-size: 24px;
 }
-section .section-maintitle h1 {
+.main-title .section-maintitle h1 {
   text-align: right;
   font-weight: 600;
   font-size: 3rem;
@@ -182,5 +192,16 @@ section .section-maintitle h1 {
   }
   nav .nav-menu li {
     padding: 12px;
+  }
+  .main-title .section-maintitle {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .main-title .section-maintitle h1 {
+    text-align: center;
+  }
+  .main-title .section-maintitle .maintitle--action {
+    text-align: center;
   }
 }

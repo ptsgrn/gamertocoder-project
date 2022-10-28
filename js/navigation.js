@@ -6,6 +6,7 @@ let navmenu = document.querySelector('.nav-menu')
 let navtoc = document.querySelector('.nav-toc')
 let navtocli = navtoc.querySelectorAll('a')
 let navtocSelected = navtoc.querySelector('.li-selected')
+let navgoup = document.querySelector('.nav-goup')
 
 let menuicon = document.querySelector(
   '.menutoggler-btn .material-symbols-outlined'
@@ -103,6 +104,7 @@ let menupath = [
 
 // initial
 menuMenipulate(true)
+checkTop()
 for (var i = 0; i < toc.length; i++) {
   if (currentpath == toc[i][0]) {
     toc[i][1].forEach(item => {
@@ -211,6 +213,21 @@ function menuMenipulate(bool) {
     }, 200)
   }
 }
+function checkTop() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    navgoup.style.display = 'block'
+    setTimeout(() => {
+      navgoup.style.transform = 'translateY(0)'
+      navgoup.style.opacity = '1'
+    }, 1)
+  } else {
+    navgoup.style.transform = 'translateY(100%)'
+    navgoup.style.opacity = '0'
+    setTimeout(() => {
+      navgoup.style.display = 'none'
+    }, 200)
+  }
+}
 
 // event
 navtocli.forEach(element => {
@@ -237,4 +254,13 @@ menutoggler.addEventListener('click', () => {
   } else {
     menuMenipulate(false)
   }
+})
+
+navgoup.addEventListener('click', () => {
+  document.scrollTop = 0
+  document.documentElement.scrollTop = 0
+})
+
+window.addEventListener('scroll', () => {
+  checkTop()
 })
