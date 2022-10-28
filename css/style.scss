@@ -22,7 +22,8 @@ nav {
     bottom: calc(100% + 8px);
     left: 50%;
     transform: translate(-50%);
-    width: 90%;
+    max-width: 400px;
+    width: 90vw;
     padding: 8px;
     display: block;
     li {
@@ -84,4 +85,13 @@ nav {
   position: fixed;
   bottom: 0;
   display: flex;
+}
+
+$breakpoint-tablet: 768px;
+@media (max-width: $breakpoint-tablet) {
+  nav {
+    .nav-toc {
+      display: none;
+    }
+  }
 }
