@@ -1,7 +1,7 @@
 @import './reset.css';
 @import './fonts.css';
 :root {
-  --yellow: rgb(254, 215, 102);
+  --yellow: #fed766;
   --yellow-secondary: rgba(254, 215, 102, 0.5);
   --black: #141414;
   --black20: #202020;

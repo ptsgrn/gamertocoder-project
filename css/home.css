@@ -275,6 +275,7 @@ a {
   .section-featured__container
     .section-featured-slide__container
     .slide__title {
+    padding: 8px;
     display: block;
     text-align: center;
   }
