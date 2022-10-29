@@ -26,7 +26,7 @@ let toc = [
         '#main_title',
       ],
       [
-        '<span class="material-symbols-outlined nav-li-icon">error</span>',
+        '<span class="material-symbols-outlined nav-li-icon">info</span>',
         'Featured',
         '#featured',
       ],
