@@ -107,130 +107,6 @@ a {
   text-decoration: none;
 }
 
-nav {
-  z-index: 100000;
-  border-radius: 12px;
-  color: var(--yellow);
-  border: 2px solid var(--yellow);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  background-color: var(--black20);
-  padding: 4px;
-  left: 50%;
-  margin-bottom: 32px;
-  transform: translateX(-50%);
-  position: fixed;
-  bottom: 0;
-  display: flex;
-}
-nav .nav-menu {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  border-radius: 12px;
-  list-style: none;
-  position: absolute;
-  background-color: var(--black20);
-  bottom: calc(100% + 8px);
-  left: 50%;
-  transform: translate(-50%);
-  max-width: 400px;
-  width: 90vw;
-  padding: 8px;
-  display: block;
-}
-nav .nav-menu li {
-  border: 4px solid transparent;
-  border-radius: 8px;
-  padding: 12px;
-}
-nav .nav-menu li a {
-  color: var(--yellow);
-}
-nav .nav-menu li div {
-  display: flex;
-  align-items: center;
-}
-nav .nav-menu li div p {
-  margin-left: 8px;
-}
-nav .nav-menu li:hover {
-  transition: all ease 0.2s;
-  border: 4px solid var(--yellow-secondary);
-}
-nav .nav-menu li:hover .menu-submenu li {
-  border: 4px solid transparent;
-}
-nav .nav-menu .submenu-btn {
-  border-radius: 0;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  border: none;
-  background: transparent;
-}
-nav .nav-menu .submenu-btn span:last-child {
-  position: absolute;
-  right: 16px;
-}
-nav .nav-menu .menu-submenu {
-  overflow: hidden;
-  border-radius: 12px;
-  margin-top: 8px;
-  border: 4px solid var(--yellow-secondary);
-  background-color: var(--black28);
-  list-style: none;
-}
-nav .nav-menu .menu-submenu li {
-  display: flex;
-  align-items: center;
-}
-nav .nav-menu .menu-submenu li p {
-  padding-left: 8px;
-}
-nav .nav-toc {
-  border-radius: 8px;
-  border: 2px solid var(--yellow);
-  margin-left: 4px;
-  padding: 4px;
-  position: relative;
-  list-style: none;
-  display: flex;
-}
-nav .nav-toc .li-selected {
-  border-radius: 8px;
-  position: absolute;
-  height: 100%;
-  background-color: var(--yellow-secondary);
-  opacity: 0;
-}
-nav .nav-toc .active {
-  opacity: 1;
-}
-nav .nav-toc a {
-  position: relative;
-  color: var(--yellow);
-  padding: 8px;
-  display: flex;
-  align-items: center;
-}
-nav .nav-toc a .nav-li-icon {
-  margin-right: 8px;
-}
-nav .nav-goup {
-  margin-left: 4px;
-}
-nav button {
-  border-radius: 8px;
-  color: var(--yellow);
-  background-color: var(--black28);
-  border: 2px solid var(--yellow);
-  display: flex;
-  align-items: center;
-  padding: 8px;
-}
-nav .nav--primary-btn:hover {
-  color: var(--black20);
-  background-color: var(--yellow);
-}
-
 .main-title {
   width: 100%;
   height: 100vh;
@@ -271,8 +147,40 @@ nav .nav--primary-btn:hover {
   height: 100vh;
 }
 .section-featured__container {
-  max-width: 27rem;
+  width: 60rem;
+  max-width: 80vw;
   margin: 32px auto;
+}
+.section-featured__container .section-featured-slide__container {
+  width: 100%;
+  height: 400px;
+  background: var(--yellow);
+  border-radius: 12px;
+  overflow-x: hidden;
+  -ms-scroll-snap-type: y mandatory;
+  scroll-snap-type: y mandatory;
+  position: relative;
+  display: inline-block;
+}
+.section-featured__container .section-featured-slide__container .slide {
+  scroll-snap-align: start;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+.section-featured__container .section-featured-slide__container .slide div {
+  position: absolute;
+  bottom: 0;
+  padding: 40px;
+}
+.section-featured__container .section-featured-slide__container .slide img {
+  position: relative;
+  min-width: 100%;
+  min-height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 .section-featured__container h1 {
   font-size: 2.5rem;
@@ -280,28 +188,22 @@ nav .nav--primary-btn:hover {
   -webkit-text-stroke: 1px rgb(254, 215, 102);
   letter-spacing: 8px;
   position: relative;
-  margin-left: 8px;
+  margin-left: 32px;
   padding-left: 8px;
 }
 .section-featured__container h1::after {
   content: '';
   display: block;
   width: 8px;
-  height: 56px;
+  height: 32px;
   background-color: rgb(254, 215, 102);
   margin-top: 16px;
   position: absolute;
-  top: calc(-50% + 8px);
+  top: calc(-50% + 12px);
   left: -24px;
 }
 
 @media (max-width: 768px) {
-  nav .nav-toc {
-    display: none;
-  }
-  nav .nav-menu li {
-    padding: 12px;
-  }
   .main-title .div-maintitle {
     top: 50%;
     left: 50%;
@@ -321,4 +223,4 @@ nav .nav--primary-btn:hover {
       1px 1px 0 rgb(254, 215, 102), -1px -1px 0 rgb(254, 215, 102),
       1px -1px 0 rgb(254, 215, 102), -1px 1px 0 rgb(254, 215, 102);
   }
-}
+} /*# sourceMappingURL=home.css.map */

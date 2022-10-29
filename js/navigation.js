@@ -23,7 +23,7 @@ let toc = [
       [
         '<span class="material-symbols-outlined nav-li-icon">Home</span>',
         'Home',
-        '#home',
+        '#main_title',
       ],
       [
         '<span class="material-symbols-outlined nav-li-icon">error</span>',
