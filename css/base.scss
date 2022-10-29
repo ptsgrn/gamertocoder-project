@@ -3,8 +3,8 @@
 // !           WILL NOT BE REFLECTED IN THE CSS FILE.
 // !           (This is a limitation of the current implementation of the
 // !           CSS generation system.)
-@import './reset.css';
-@import './fonts.css';
+@import './reset.scss';
+@import './fonts.scss';
 
 // variable
 $yellow: rgb(254, 215, 102);
