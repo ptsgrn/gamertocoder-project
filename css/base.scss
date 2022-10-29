@@ -8,6 +8,7 @@
 
 // variable
 $yellow: rgb(254, 215, 102);
+$yellow-700: #564922;
 $yellow-secondary: rgba(254, 215, 102, 0.5);
 $black: #141414;
 $black20: #202020;
@@ -20,11 +21,13 @@ $blue-600: #4358a7;
 $blue-700: #1c3667;
 $blue-800: #1a2e5a;
 $blue-900: #061123;
+$gray-800: #505050;
 
 // breakpoints
 $breakpoint-tablet: 768px;
 :root {
   --yellow: rgb(254, 215, 102);
+  --yellow-700: #564922;
   --yellow-secondary: rgba(254, 215, 102, 0.5);
   --black: #141414;
   --black20: #202020;
@@ -37,6 +40,7 @@ $breakpoint-tablet: 768px;
   --blue-700: #1c3667;
   --blue-800: #1a2e5a;
   --blue-900: #061123;
+  --gray-800: #505050;
 }
 
 html {
