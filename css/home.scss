@@ -29,10 +29,20 @@ a {
 }
 
 .main-title {
+  overflow: hidden;
   width: 100%;
   height: 100vh;
   background-color: var(--yellow);
   position: relative;
+
+  .maintitle__bg {
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
   .div-maintitle {
     display: block;
@@ -43,7 +53,6 @@ a {
     top: 50%;
     transform: translateY(-50%);
     width: 50%;
-
     .maintitle--action {
       text-align: right;
       margin-top: 32px;
@@ -86,17 +95,52 @@ a {
       scroll-snap-type: y mandatory;
       position: relative;
       display: inline-block;
+
       .slide {
         scroll-snap-align: start;
         position: relative;
         overflow: hidden;
         height: 100%;
         width: 100%;
-        div {
+
+        &__title {
           position: absolute;
           bottom: 0;
           padding: 40px;
+          display: flex;
+          align-items: center;
+
+          .title__left {
+            display: block;
+          }
+
+          .title__right {
+            display: flex;
+            justify-content: center;
+            button {
+              width: 100px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              span {
+                padding-right: 8px;
+              }
+            }
+          }
+
+          p {
+            color: white;
+          }
         }
+
+        &__gradiant {
+          position: absolute;
+          width: 100%;
+          height: 50%;
+          bottom: 0;
+          background: linear-gradient(0deg, black, transparent);
+        }
+
         img {
           position: relative;
           min-width: 100%;
@@ -145,6 +189,19 @@ a {
 
       .maintitle--action {
         text-align: center;
+      }
+    }
+  }
+
+  .section-featured {
+    &__container {
+      .section-featured-slide__container {
+        .slide {
+          &__title {
+            display: block;
+            text-align: center;
+          }
+        }
       }
     }
   }
