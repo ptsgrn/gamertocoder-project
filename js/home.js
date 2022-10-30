@@ -1,3 +1,6 @@
+// home banner
+
+
 const isDisabledCache = false
 
 // use console.log with css
@@ -69,5 +72,67 @@ async function generateScrollingImageFromApiResponse(data) {
 async function getMinigameFromApi() {
   return (await fetch('https://gamertocoder.garena.co.th/api/minigames')).json()
 }
-
 init()
+
+// featured banner
+let featuredslideContainer = document.querySelector('.section-featured-slide__container')
+
+async function getGameApi(url) {
+  return (await fetch(url)).json();
+}
+
+async function banner() {
+  let data = await getGameApi('https://gamertocoder.garena.co.th/api/minigames')
+  let position = 0
+  let featuredSlide = ``
+  console.log(data)
+  featuredslideContainer.innerHTML = ""
+
+
+  for (let i = 0; i < data.length; i++) {
+    let imgsrc = null
+    console.log(i)
+    if (data[i]['images'] == null){
+      imgsrc = 'images/wall-01.jpg'
+    }else{
+      imgsrc = data[i]['images'][0]
+    }
+    featuredSlide += `
+    <div class="slide">
+              <img src="${imgsrc}" alt="" />
+              <span class="slide__gradiant"></span>
+              <div class="slide__title">
+                <div class="title__left">
+                  <h1>${data[i]['name']}</h1>
+                  <p>
+                  ${data[i]['description']}
+                  </p>
+                </div>
+              <div class="title__right">
+              <button class="primary-btn">
+                    <span class="material-symbols-outlined">open_in_new</span
+                    >JOIN
+              </button>
+            </div>
+        </div>
+    </div>
+    `
+  }
+  featuredslideContainer.innerHTML = featuredSlide
+
+
+  function automaticslide(){
+    console.log(position)
+    let slide = featuredslideContainer.querySelectorAll('.slide')
+    let clientHeight = slide[0].clientHeight
+    position++
+    featuredslideContainer.scrollTop = position * clientHeight
+    if (position >= slide.length){
+      position = 0
+    } 
+    setTimeout(automaticslide,5000)
+  }
+  setTimeout(await automaticslide,5000)
+}
+
+banner()

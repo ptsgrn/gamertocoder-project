@@ -1,5 +1,7 @@
 // im gonna fix it later this just for test you can delete it
 
+// don't mind my code it kinda junk but hey it's work!!!!
+
 // object variable
 let menutoggler = document.querySelector('.menutoggler-btn')
 let navmenu = document.querySelector('.nav-menu')

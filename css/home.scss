@@ -168,6 +168,7 @@ a {
       scroll-snap-type: y mandatory;
       position: relative;
       display: inline-block;
+      scroll-behavior: smooth;
 
       .slide {
         scroll-snap-align: start;
@@ -213,6 +214,7 @@ a {
           width: 100%;
           height: 50%;
           bottom: 0;
+          left: 0;
           background: linear-gradient(0deg, black, transparent);
         }
 
@@ -402,8 +404,7 @@ a {
 
     &__content {
       .content-list {
-        &__tab {
-        }
+
 
         &__content {
           color: white;
