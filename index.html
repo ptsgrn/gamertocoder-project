@@ -1,138 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blockman Go</title>
-    <link rel="stylesheet" href="./css/home.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-      rel="stylesheet" />
-    <script src="js/navigation.js" defer></script>
-    <script src="js/home.js" defer></script>
-    <script src="js/featured.js"></script>
-  </head>
 
-  <body>
-    <a class="logo" href="/">
-      <img src="images/benny-02.png" alt="logo" width="80" />
-    </a>
-    <nav class="nav">
-      <ul class="nav-menu">
-        <!--element generate in javascript-->
-      </ul>
-      <button class="menutoggler-btn nav--primary-btn">
-        <span class="material-symbols-outlined">menu</span>
-        Menu
-      </button>
-      <ul class="nav-toc">
-        <span class="li-selected"></span>
-        <!--element generate in javascript-->
-      </ul>
-      <button class="nav-goup nav--primary-btn">
-        <span class="material-symbols-outlined">expand_less</span>
-      </button>
-    </nav>
-    <main>
-      <section class="main-title" id="main_title">
-        <img src="images/banner-use-1.png" alt="" class="maintitle__bg" />
-        <div class="banner-image__wrapper">
-          <div class="banner-image__container">
-            <!-- populate in js-->
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blockman Go</title>
+  <link rel="stylesheet" href="./css/home.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <script src="js/navigation.js" defer></script>
+  <script src="js/home.js" defer></script>
+  <script src="js/featured.js"></script>
+</head>
+
+<body>
+  <a class="logo" href="/">
+    <img src="images/benny-02.png" alt="logo" width="80" />
+  </a>
+  <nav class="nav">
+    <ul class="nav-menu">
+      <!--element generate in javascript-->
+    </ul>
+    <button class="menutoggler-btn nav--primary-btn">
+      <span class="material-symbols-outlined">menu</span>
+      Menu
+    </button>
+    <ul class="nav-toc">
+      <span class="li-selected"></span>
+      <!--element generate in javascript-->
+    </ul>
+    <button class="nav-goup nav--primary-btn">
+      <span class="material-symbols-outlined">expand_less</span>
+    </button>
+  </nav>
+  <main>
+    <section class="main-title" id="main_title">
+      <img src="images/banner-use-1.png" alt="" class="maintitle__bg" />
+      <div class="banner-image__wrapper">
+        <div class="banner-image__container">
+          <!-- populate in js-->
         </div>
-        <div class="div-maintitle">
-          <h1>สำรวจโลกที่อยู่เหนือจินตนาการของคุณ</h1>
-          <div class="maintitle--action">
-            <button class="primary-btn">เข้า</button>
-            <button class="secondary-btn">ดาวโหลด</button>
-          </div>
+      </div>
+      <div class="div-maintitle">
+        <h1>สำรวจโลกที่อยู่เหนือจินตนาการของคุณ</h1>
+        <div class="maintitle--action">
+          <button class="primary-btn">เข้า</button>
+          <button class="secondary-btn">ดาวโหลด</button>
         </div>
-      </section>
-      <section id="featured" class="section-featured">
-        <div class="section-featured__container">
-          <h1 class="section-featured__title">FEATURED</h1>
-          <div class="section-featured-slide__container">
-            <div class="slide">
-              <img src="images/banner-01.png" alt="" />
-              <span class="slide__gradiant"></span>
-              <div class="slide__title">
-                <div class="title__left">
-                  <h1>Loading..</h1>
-                  <p>
-                    Loading
-                  </p>
-                </div>
-                <div class="title__right">
-                  <button class="primary-btn">
-                    <span class="material-symbols-outlined">open_in_new</span
-                    >JOIN
-                  </button>
-                </div>
+      </div>
+    </section>
+    <section id="featured" class="section-featured">
+      <div class="section-featured__container">
+        <h1 class="section-featured__title">FEATURED</h1>
+        <div class="section-featured-slide__container">
+          <div class="slide">
+            <img src="images/banner-01.png" alt="" />
+            <span class="slide__gradiant"></span>
+            <div class="slide__title">
+              <div class="title__left">
+                <h1>Loading..</h1>
+                <p>
+                  Loading
+                </p>
+              </div>
+              <div class="title__right">
+                <button class="primary-btn">
+                  <span class="material-symbols-outlined">open_in_new</span>JOIN
+                </button>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <section class="section-announcements" id="announcements">
-        <div class="section-announcements__doodle">
-          <img src="images/superstar_01.png" alt="" />
+      </div>
+    </section>
+    <section class="section-announcements" id="announcements">
+      <div class="section-announcements__doodle">
+        <img src="images/superstar_01.png" alt="" />
+      </div>
+      <div class="section-announcements__content">
+        <h1>ANOUCEMENT</h1>
+        <div class="content-list">
+          <ul class="content-list__tab">
+            <li><button>All</button></li>
+            <li><button>News</button></li>
+            <li><button>Events</button></li>
+            <li><button>Patch</button></li>
+          </ul>
+          <ul class="content-list__content">
+            <a href="/">
+              <li>
+                <div class="image-container">
+                  <img src="images/banner-02.png" alt="" />
+                </div>
+                <div class="description">
+                  <h3>Loading...</h3>
+                  <p>Loading...</p>
+                </div>
+              </li>
+            </a>
+          </ul>
         </div>
-        <div class="section-announcements__content">
-          <h1>ANOUCEMENT</h1>
-          <div class="content-list">
-            <ul class="content-list__tab">
-              <li><button>All</button></li>
-              <li><button>News</button></li>
-              <li><button>Events</button></li>
-              <li><button>Patch</button></li>
-            </ul>
-            <ul class="content-list__content">
-              <a href="/"
-                ><li>
-                  <div class="image-container">
-                    <img src="images/banner-02.png" alt="" />
-                  </div>
-                  <div class="description">
-                    <h3>Patch OBS45</h3>
-                    <p>What's new</p>
-                  </div>
-                </li></a
-              >
-              <a href="/"
-                ><li>
-                  <div class="image-container">
-                    <img src="images/banner-02.png" alt="" />
-                  </div>
-                  <div class="description">
-                    <h3>Patch OBS45</h3>
-                    <p>What's new</p>
-                  </div>
-                </li></a
-              >
-            </ul>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <span class="footer__credits">
-        <span><b>Theme Team</b></span>
-        <span
-          >As part of
-          <a href="https://gamertocoder.garena.co.th/" target="_blank"
-            >Gamer to Coder</a
-          >
-          submission.</span
-        >
-      </span>
-      <span class="footer__copy">
-        <span
-          >Trademarks belong to their respective owners.
-          <wbr />All&nbsp;rights&nbsp;Reserved.</span
-        >
-      </span>
-    </footer>
-  </body>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <span class="footer__credits">
+      <span><b>Theme Team</b></span>
+      <span>As part of
+        <a href="https://gamertocoder.garena.co.th/" target="_blank">Gamer to Coder</a>
+        submission.</span>
+    </span>
+    <span class="footer__copy">
+      <span>Trademarks belong to their respective owners.
+        <wbr />All&nbsp;rights&nbsp;Reserved.</span>
+    </span>
+  </footer>
+</body>
+
 </html>

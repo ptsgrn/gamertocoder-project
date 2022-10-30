@@ -155,10 +155,10 @@ a {
 
 .section-featured {
   &__container {
+    position: relative;
     width: 60rem;
     max-width: 80vw;
     margin: 32px auto;
-
     .section-featured-slide__container {
       width: 100%;
       height: 400px;
@@ -186,6 +186,9 @@ a {
 
           .title__left {
             display: block;
+            p{
+              line-clamp: 2;
+            }
           }
 
           .title__right {
@@ -275,6 +278,9 @@ a {
   }
 }
 
+
+
+
 .section-announcements {
   width: 60rem;
   max-width: 80vw;
@@ -318,10 +324,15 @@ a {
             padding: 8px 16px 8px 16px;
           }
         }
+        .active{
+          color: var(--black20);
+          background-color: var(--yellow);
+        }
       }
 
       &__content {
-        border-top: 0px;
+        overflow-y: auto;
+        height: 304px;
         border: 4px solid var(--yellow);
         list-style: none;
 
