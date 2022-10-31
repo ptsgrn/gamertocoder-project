@@ -59,7 +59,6 @@ function creatPreviews(data) {
   }
   let ret = ''
   data.images.forEach(image => {
-    console.log(image)
     ret += `<a
       class="preview-image__image"
       data-url="${image}">

@@ -640,8 +640,9 @@ header .image-banner img {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  -o-object-fit: cover;
-     object-fit: cover;
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%;
 }
 
 header .logo-image {

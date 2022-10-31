@@ -6,7 +6,6 @@ async function createSuggestion() {
   let data = await getAllGames()
   let ret = ''
   for (let game of data) {
-    console.log(game)
     ret += `<a href="/minigame.html?id=${game.no}" class="item">
             <div class="item__image">
               <img

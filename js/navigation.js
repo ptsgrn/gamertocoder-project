@@ -133,7 +133,7 @@ let menupath = [
   {
     icon: '<span class="material-symbols-outlined nav-li-icon">terminal</span>',
     text: 'มินิเกม',
-    href: '/',
+    href: '/minigames.html',
   },
   {
     icon: '<span class="material-symbols-outlined nav-li-icon">phone</span>',
