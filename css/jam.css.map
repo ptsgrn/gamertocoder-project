@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,CAAC,CAAC;EACE,OAAO,EAAE,CAAC;EACV,MAAM,EAAE,CAAC;EACT,UAAU,EAAE,aAAa;CAC5B",
+    "sources": [
+        "jam.scss"
+    ],
+    "names": [],
+    "file": "jam.css"
+}
