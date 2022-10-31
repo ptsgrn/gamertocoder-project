@@ -160,6 +160,9 @@ a {
       position: relative;
       display: inline-block;
       scroll-behavior: smooth;
+      &::-webkit-scrollbar{
+        display: none;
+      }
 
       .slide {
         
@@ -231,9 +234,7 @@ a {
       }
     }
 
-    .section-featured-slide__container::-webkit-scrollbar {
-      display: none;
-    }
+
 
     h1 {
       font-size: 2.5rem;
@@ -302,8 +303,11 @@ a {
     }
 
     .content-list {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 4px solid var(--yellow);
       &__tab {
-        border: 4px solid var(--yellow);
+        border-bottom: 4px solid var(--yellow);
         list-style: none;
         display: flex;
         flex-direction: row;
@@ -329,9 +333,16 @@ a {
       &__content {
         overflow-y: auto;
         height: 304px;
-        border: 4px solid var(--yellow);
         list-style: none;
-
+        &::-webkit-scrollbar{
+          background: var(--black20);
+        }
+        &::-webkit-scrollbar-track{
+          background: var(--black20);
+        }
+        &::-webkit-scrollbar-thumb{
+          background: var(--yellow);
+        }
         a {
           li {
             display: flex;
