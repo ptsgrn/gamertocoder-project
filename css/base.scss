@@ -48,6 +48,15 @@ $breakpoint-tablet: 768px;
 
 html {
   scroll-behavior: smooth;
+  &::-webkit-scrollbar{
+    background:var(--black);
+  }
+  &::-webkit-scrollbar-track{
+    background:var(--black);
+  }
+  &::-webkit-scrollbar-thumb {
+    background: var(--yellow);
+  }
 }
 body {
   font-family: 'LINE Seed Sans TH', sans-serif;
@@ -61,7 +70,7 @@ a {
 
 footer {
   padding: 20px 0;
-
+  margin-bottom: 120px;
   .footer {
     &__credits,
     &__copy {
@@ -72,7 +81,6 @@ footer {
       flex-direction: column;
       text-align: center;
       font-size: 0.8rem;
-
       span {
         margin: 0 5px;
         display: block;
@@ -80,6 +88,7 @@ footer {
     }
   }
 }
+
 
 .primary-btn {
   border: none;
