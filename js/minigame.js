@@ -28,22 +28,9 @@ async function init() {
 }
 
 async function getGameDataFromApi(gameId) {
-  return {
-    no: 2,
-    name: 'Free City',
-    icon: 'https://cdngarenanow-a.akamaihd.net/webth/cdn/garena/gamertocoder/freecity/logo.png',
-    genre: ['Simulation', 'Open-world'],
-    images: [
-      'https://cdngarenanow-a.akamaihd.net/webth/cdn/garena/gamertocoder/freecity/freecity_01.png',
-      'https://cdngarenanow-a.akamaihd.net/webth/cdn/garena/gamertocoder/freecity/freecity_02.png',
-      'https://cdngarenanow-a.akamaihd.net/webth/cdn/garena/gamertocoder/freecity/freecity_03.png',
-      'https://cdngarenanow-a.akamaihd.net/webth/cdn/garena/gamertocoder/freecity/freecity_04.png',
-      'https://cdngarenanow-a.akamaihd.net/webth/cdn/garena/gamertocoder/freecity/freecity_05.png',
-    ],
-    description:
-      'เคยนึกภาพตัวเองเป็นเจ้าของร้านกาแฟที่กำลังเตรียมกาแฟยามบ่ายให้กับเพื่อนๆ บ้างไหม?  หรือคุณเคยอยากลองใช้ชีวิตตามบทบาทต่างๆ เช่น ครู พยาบาล ตำรวจ คนขายเบอร์เกอร์ บ้างไหม? Free City เกมจำลองชีวิตจริงที่คุณกำลังตามหา',
-  }
-  // return await (await fetch(`https://gamertocoder.garena.co.th/api/minigame/${gameId}`)).json()
+  return await (
+    await fetch(`https://gamertocoder.garena.co.th/api/minigame/${gameId}`)
+  ).json()
 }
 
 async function getAllGames() {
