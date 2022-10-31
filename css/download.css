@@ -1,0 +1,662 @@
+/*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+/*
+Document
+========
+*/
+/**
+Use a better box model (opinionated).
+*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+/**
+Use a more readable tab size (opinionated).
+*/
+html {
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+     tab-size: 4;
+}
+
+/**
+1. Correct the line height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+*/
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/*
+Sections
+========
+*/
+/**
+Remove the margin in all browsers.
+*/
+body {
+  margin: 0;
+}
+
+/**
+Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+*/
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/*
+Grouping content
+================
+*/
+/**
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+*/
+hr {
+  height: 0; /* 1 */
+  color: inherit; /* 2 */
+}
+
+/*
+Text-level semantics
+====================
+*/
+/**
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+abbr[title] {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/**
+Add the correct font weight in Edge and Safari.
+*/
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+2. Correct the odd 'em' font sizing in all browsers.
+*/
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+Add the correct font size in all browsers.
+*/
+small {
+  font-size: 80%;
+}
+
+/**
+Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
+*/
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+Tabular data
+============
+*/
+/**
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+*/
+table {
+  text-indent: 0; /* 1 */
+  border-color: inherit; /* 2 */
+}
+
+/*
+Forms
+=====
+*/
+/**
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+*/
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+Remove the inheritance of text transform in Edge and Firefox.
+1. Remove the inheritance of text transform in Firefox.
+*/
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+Correct the inability to style clickable types in iOS and Safari.
+*/
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+Remove the inner border and padding in Firefox.
+*/
+::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+Restore the focus styles unset by the previous rule.
+*/
+:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+Remove the additional ':invalid' styles in Firefox.
+See: https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737
+*/
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/**
+Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
+*/
+legend {
+  padding: 0;
+}
+
+/**
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+progress {
+  vertical-align: baseline;
+}
+
+/**
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to 'inherit' in Safari.
+*/
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/*
+Interactive
+===========
+*/
+/*
+Add the correct display in Chrome and Safari.
+*/
+summary {
+  display: list-item;
+}
+
+@font-face {
+  font-family: "LINE Seed Sans TH";
+  src: local("LINE Seed Sans TH"), url(//content.ptsgrn.dev/gamertocoder-project/assets/fonts/LINESeedSansTH_W_Th.woff) format("woff"), url(//content.ptsgrn.dev/gamertocoder-project/assets/fonts/LINESeedSansTH_W_Th.woff2) format("woff2"), url(//content.ptsgrn.dev/gamertocoder-project/assets/fonts/LINESeedSansTH_Th.ttf) format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "LINE Seed Sans TH";
+  src: local("LINE Seed Sans TH"), url(//content.ptsgrn.dev/gamertocoder-project/assets/fonts/LINESeedSansTH_W_Rg.woff) format("woff"), url(//content.ptsgrn.dev/gamertocoder-project/assets/fonts/LINESeedSansTH_W_Rg.woff2) format("woff2"), url(//content.ptsgrn.dev/gamertocoder-project/assets/fonts/LINESeedSansTH_Rg.ttf) format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "LINE Seed Sans TH";
+  src: local("LINE Seed Sans TH"), url(//content.ptsgrn.dev/gamertocoder-project/assets/fonts/LINESeedSansTH_W_Bd.woff) format("woff"), url(//content.ptsgrn.dev/gamertocoder-project/assets/fonts/LINESeedSansTH_W_Bd.woff2) format("woff2"), url(//content.ptsgrn.dev/gamertocoder-project/assets/fonts/LINESeedSansTH_Bd.ttf) format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "LINE Seed Sans TH";
+  src: local("LINE Seed Sans TH"), url(//content.ptsgrn.dev/gamertocoder-project/assets/fonts/LINESeedSansTH_W_He.woff) format("woff"), url(//content.ptsgrn.dev/gamertocoder-project/assets/fonts/LINESeedSansTH_W_He.woff2) format("woff2"), url(//content.ptsgrn.dev/gamertocoder-project/assets/fonts/LINESeedSansTH_He.ttf) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "LINE Seed Sans TH";
+  src: local("LINE Seed Sans TH"), url(//content.ptsgrn.dev/gamertocoder-project/assets/fonts/LINESeedSansTH_W_XBd.woff) format("woff"), url(//content.ptsgrn.dev/gamertocoder-project/assets/fonts/LINESeedSansTH_W_XBd.woff2) format("woff2"), url(//content.ptsgrn.dev/gamertocoder-project/assets/fonts/LINESeedSansTH_XBd.ttf) format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+:root {
+  --white: #efefef;
+  --yellow: rgb(254, 215, 102);
+  --yellow-700: #564922;
+  --yellow-secondary: rgba(254, 215, 102, 0.5);
+  --black: #141414;
+  --black20: #202020;
+  --black28: #282828;
+  --blue-100: #c6cef2;
+  --blue-150: #72bcd5;
+  --blue-300: #63a0d7;
+  --blue-500: #5386b1;
+  --blue-600: #4358a7;
+  --blue-700: #1c3667;
+  --blue-800: #1a2e5a;
+  --blue-900: #061123;
+  --gray-800: #505050;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+html::-webkit-scrollbar {
+  background: var(--black);
+}
+html::-webkit-scrollbar-track {
+  background: var(--black);
+}
+html::-webkit-scrollbar-thumb {
+  background: var(--yellow);
+}
+
+body {
+  font-family: "LINE Seed Sans TH", sans-serif;
+  background-color: #141414;
+}
+
+a {
+  color: #5386b1;
+  -webkit-tap-highlight-color: transparent;
+}
+
+footer {
+  padding: 20px 0;
+  margin-bottom: 120px;
+}
+footer .footer__credits, footer .footer__copy {
+  color: #c6cef2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  font-size: 0.8rem;
+}
+footer .footer__credits span, footer .footer__copy span {
+  margin: 0 5px;
+  display: block;
+}
+
+.primary-btn {
+  border: none;
+  border-radius: 12px;
+  padding: 8px;
+  border: 2px solid var(--black20);
+  background-color: var(--black20);
+  color: var(--yellow);
+}
+
+.primary-btn:active {
+  border: 2px solid var(--yellow-secondary);
+}
+
+.secondary-btn {
+  border: none;
+  border-radius: 12px;
+  padding: 8px;
+  border: 2px solid var(--black20);
+  background-color: var(--yellow);
+  color: var(--black20);
+}
+
+.logo {
+  position: fixed;
+  padding: 24px 8px 8px 8px;
+  background-color: #061123;
+  left: 64px;
+  cursor: pointer;
+  border-radius: 0 0 12px 12px;
+  transition-property: background-color, padding;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  z-index: 100;
+}
+.logo.logo--partial-hidden {
+  background-color: rgba(6, 17, 35, 0.7);
+  padding: 8px;
+}
+.logo.logo--partial-hidden:hover {
+  padding-top: 24px;
+  background-color: #061123;
+}
+.logo:active {
+  padding-top: 28px;
+}
+
+nav {
+  z-index: 100000;
+  border-radius: 12px;
+  color: var(--yellow);
+  border: 2px solid var(--yellow);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: var(--black20);
+  padding: 4px;
+  left: 50%;
+  margin-bottom: 32px;
+  transform: translateX(-50%);
+  position: fixed;
+  bottom: 0;
+  display: flex;
+}
+nav a {
+  text-decoration: none;
+}
+nav .nav-menu {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  list-style: none;
+  position: absolute;
+  background-color: var(--black20);
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translate(-50%);
+  max-width: 400px;
+  width: 90vw;
+  padding: 8px;
+  display: block;
+}
+nav .nav-menu li {
+  border: 4px solid transparent;
+  border-radius: 8px;
+  padding: 12px;
+}
+nav .nav-menu li a {
+  color: var(--yellow);
+}
+nav .nav-menu li div {
+  display: flex;
+  align-items: center;
+}
+nav .nav-menu li div p {
+  margin-left: 8px;
+}
+nav .nav-menu li:hover {
+  transition: all ease 0.2s;
+  border: 4px solid var(--yellow-secondary);
+}
+nav .nav-menu li:hover .menu-submenu li {
+  border: 4px solid transparent;
+}
+nav .nav-menu .submenu-btn {
+  border-radius: 0;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
+}
+nav .nav-menu .submenu-btn span:last-child {
+  position: absolute;
+  right: 16px;
+}
+nav .nav-menu .menu-submenu {
+  overflow: hidden;
+  border-radius: 12px;
+  margin-top: 8px;
+  border: 4px solid var(--yellow-secondary);
+  background-color: var(--black28);
+  list-style: none;
+}
+nav .nav-menu .menu-submenu li {
+  display: flex;
+  align-items: center;
+}
+nav .nav-menu .menu-submenu li p {
+  padding-left: 8px;
+}
+nav .nav-toc {
+  border-radius: 8px;
+  border: 2px solid var(--yellow);
+  margin-left: 4px;
+  padding: 4px;
+  position: relative;
+  list-style: none;
+  display: flex;
+}
+nav .nav-toc .li-selected {
+  border-radius: 8px;
+  position: absolute;
+  height: 100%;
+  background-color: var(--yellow-secondary);
+  opacity: 0;
+}
+nav .nav-toc .active {
+  opacity: 1;
+}
+nav .nav-toc a {
+  position: relative;
+  color: var(--yellow);
+  padding: 8px;
+  display: flex;
+  align-items: center;
+}
+nav .nav-toc a .nav-li-icon {
+  margin-right: 8px;
+}
+nav .nav-goup {
+  margin-left: 4px;
+}
+nav button {
+  border-radius: 8px;
+  color: var(--yellow);
+  background-color: var(--black28);
+  border: 2px solid var(--yellow);
+  display: flex;
+  align-items: center;
+  padding: 8px;
+}
+nav .nav--primary-btn:hover {
+  color: var(--black20);
+  background-color: var(--yellow);
+}
+
+@media screen and (max-width: 768px) {
+  .logo {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  nav .nav-toc {
+    display: none;
+  }
+  nav .nav-menu li {
+    padding: 12px;
+  }
+}
+* {
+  padding: 0;
+  margin: 0;
+  transition: all ease 0.2s;
+}
+
+body {
+  background-color: #141414;
+}
+
+.hero-header {
+  width: 100%;
+  background-image: url(/images/banner-01.png);
+  background-size: 1600px;
+  background-position: 50% center;
+  height: 100vh;
+  position: relative;
+  max-height: 700px;
+  -webkit-animation-name: bg-slide;
+          animation-name: bg-slide;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+.hero-header__overlay-text {
+  position: absolute;
+  color: #141414;
+  text-align: right;
+  top: 50%;
+  right: 48px;
+}
+.hero-header__overlay-text h1 {
+  display: inline;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  background-color: rgb(254, 215, 102);
+  white-space: pre-wrap;
+  padding-left: 0px;
+  line-height: 1.5em;
+  box-shadow: -8px 0 0 rgb(254, 215, 102), 8px 0 0 rgb(254, 215, 102);
+}
+.hero-header__overlay-text .download-button-group {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-gap: 8px;
+}
+.hero-header__overlay-text .download-button-group .download-button {
+  position: relative;
+  display: grid;
+  grid-template: "icon text" 1em "icon platform" 1fr/48px auto;
+  width: 200px;
+  padding: 8px;
+  background-color: #141414;
+  border-radius: 12px;
+  text-decoration: none;
+  text-align: left;
+}
+.hero-header__overlay-text .download-button-group .download-button__icon {
+  position: absolute;
+  grid-area: icon;
+  width: 32px;
+  height: 32px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.hero-header__overlay-text .download-button-group .download-button span {
+  grid-area: text;
+  align-items: center;
+  font-size: 0.7rem;
+  position: absolute;
+  top: 25%;
+  color: rgb(254, 215, 102);
+  padding-left: 4px;
+}
+.hero-header__overlay-text .download-button-group .download-button strong {
+  grid-area: platform;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: rgb(254, 215, 102);
+  padding-left: 4px;
+}
+
+.section-require {
+  width: 60rem;
+  max-width: 90vw;
+  margin: 64px auto auto auto;
+}
+.section-require h1 {
+  font-size: 2.5rem;
+  letter-spacing: 4px;
+  color: rgb(254, 215, 102);
+}
+.section-require__content {
+  padding: 8px;
+  color: white;
+}
+.section-require__content h2 {
+  padding-bottom: 8px;
+}
+.section-require__content p {
+  padding-bottom: 4px;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-header__overlay-text .download-button-group {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: end;
+  }
+  .hero-header__overlay-text .download-button-group .download-button {
+    width: 100%;
+    justify-self: end;
+  }
+}
+@-webkit-keyframes bg-slide {
+  100% {
+    background-position: 30% center;
+  }
+}
+@keyframes bg-slide {
+  100% {
+    background-position: 30% center;
+  }
+}
