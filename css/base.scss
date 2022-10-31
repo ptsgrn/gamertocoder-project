@@ -79,6 +79,28 @@ footer {
   }
 }
 
+.primary-btn {
+  border: none;
+  border-radius: 12px;
+  padding: 8px;
+  border: 2px solid var(--black20);
+  background-color: var(--black20);
+  color: var(--yellow);
+}
+
+.primary-btn:active {
+  border: 2px solid var(--yellow-secondary);
+}
+
+.secondary-btn {
+  border: none;
+  border-radius: 12px;
+  padding: 8px;
+  border: 2px solid var(--black20);
+  background-color: var(--yellow);
+  color: var(--black20);
+}
+
 
 .logo {
   position: fixed;

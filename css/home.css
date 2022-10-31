@@ -364,6 +364,28 @@ footer .footer__credits span, footer .footer__copy span {
   display: block;
 }
 
+.primary-btn {
+  border: none;
+  border-radius: 12px;
+  padding: 8px;
+  border: 2px solid var(--black20);
+  background-color: var(--black20);
+  color: var(--yellow);
+}
+
+.primary-btn:active {
+  border: 2px solid var(--yellow-secondary);
+}
+
+.secondary-btn {
+  border: none;
+  border-radius: 12px;
+  padding: 8px;
+  border: 2px solid var(--black20);
+  background-color: var(--yellow);
+  color: var(--black20);
+}
+
 .logo {
   position: fixed;
   padding: 24px 8px 8px 8px;
@@ -586,28 +608,6 @@ nav .nav--primary-btn:hover {
   margin: 0;
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
-}
-
-.primary-btn {
-  border: none;
-  border-radius: 12px;
-  padding: 8px;
-  border: 2px solid var(--black20);
-  background-color: var(--black20);
-  color: var(--yellow);
-}
-
-.primary-btn:active {
-  border: 2px solid var(--yellow-secondary);
-}
-
-.secondary-btn {
-  border: none;
-  border-radius: 12px;
-  padding: 8px;
-  border: 2px solid var(--black20);
-  background-color: var(--yellow);
-  color: var(--black20);
 }
 
 a {
