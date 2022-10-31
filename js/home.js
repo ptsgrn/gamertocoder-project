@@ -128,7 +128,7 @@ async function banner() {
 
 
   function automaticslide(){
-    console.log(position)
+    // console.log(position)
     let slide = featuredslideContainer.querySelectorAll('.slide')
     let clientHeight = slide[0].clientHeight
     position++
