@@ -37,9 +37,9 @@ let toc = [
         '#announcements',
       ],
       [
-        '<span class="material-symbols-outlined nav-li-icon">download</span>',
-        'Download',
-        '#download',
+        '<span class="material-symbols-outlined nav-li-icon">edit</span>',
+        'Editor',
+        '#editor',
       ],
     ],
   ],
