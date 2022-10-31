@@ -11,11 +11,12 @@ if (gameId === null || gameId === undefined || gameId === '') {
 }
 
 async function init() {
-  const gameData = await getGameDataFromApi(gameId)
+  const gameData = await getGameDataFromApi(gameId).catch(console.error)
   const $ = document.querySelector
   document.title = `${gameData.name} | Blockman Go minigame`
   document.querySelector('#phd-title').textContent = gameData.name || ''
-  document.querySelector('#phd-banner-image').src = gameData.images[0]
+  document.querySelector('#phd-banner-image').src =
+    gameData.images === null ? '/images/banner-01.png' : gameData.images[0]
   document
     .querySelector('#phd-banner-image')
     .setAttribute('alt', `${gameData.name} banner`)
@@ -24,19 +25,22 @@ async function init() {
     createCategoryLink(gameData)
   document.querySelector('#phd-desc').textContent = gameData.description || ''
   document.querySelector('#phd-previews').innerHTML = creatPreviews(gameData)
-  document.querySelector('#phd-suggests').innerHTML = await createSuggestion()
+  document.querySelector('#phd-suggests').innerHTML =
+    await createSuggestion().catch(console.error)
 }
 
 async function getGameDataFromApi(gameId) {
   return await (
     await fetch(`https://gamertocoder.garena.co.th/api/minigame/${gameId}`)
-  ).json()
+  )
+    .json()
+    .catch(console.error)
 }
 
 async function getAllGames() {
-  return await (
-    await fetch('https://gamertocoder.garena.co.th/api/minigames')
-  ).json()
+  return await (await fetch('https://gamertocoder.garena.co.th/api/minigames'))
+    .json()
+    .catch(console.error)
 }
 
 function createCategoryLink(data) {
@@ -48,6 +52,11 @@ function createCategoryLink(data) {
 }
 
 function creatPreviews(data) {
+  if (data.images === null) {
+    return `<a
+      class="preview-image__image"
+      data-url="/images/banner-01.png" style="padding: 100px;text-align:center; background-color: gray; border-radius: 25px; color: white;">No Images Available</a>`
+  }
   let ret = ''
   data.images.forEach(image => {
     console.log(image)
@@ -63,7 +72,7 @@ function creatPreviews(data) {
 }
 
 async function createSuggestion() {
-  let data = await getAllGames()
+  let data = await getAllGames().catch(console.error)
   let ret = ''
   data = data.sort(() => Math.random() - 0.5)
   for (let i = 0; i < 5; i++) {
