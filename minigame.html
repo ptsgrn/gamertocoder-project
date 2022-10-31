@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="images/favicon.png" type="image/png" />
     <link
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-    rel="stylesheet" />
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet" />
     <title>{name} | Blockman Go minigame</title>
     <link rel="stylesheet" href="css/minigame.css" />
-    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/base.css" />
     <script src="./js/minigame.js" defer></script>
     <script src="./js/navigation.js" defer></script>
   </head>
@@ -37,31 +37,23 @@
     </a>
     <header id="title">
       <div class="image-banner">
-        <img src="/images/bedwars/bedwars_01.png" alt="Bedwars images Banner" />
+        <img id="phd-banner-image" src="/images/" alt="" />
       </div>
       <div class="logo-image">
-        <img src="/images/bedwars/logo.png" alt="Bed Wars Logo" />
+        <img id="phd-logo" src="/images/bedwars/logo.png" alt="Bed Wars Logo" />
       </div>
       <div class="title-text">
-        <h1>Bed Wars</h1>
+        <h1 id="phd-title">[phd]</h1>
         <div class="category">
           <span class="category-text">หมวดหมู่:</span>
-          <a class="category-badge" title="ดูเกมเพิ่มในหมวดหมู่ Action"
-            >Action</a
-          >
-          <a class="category-badge" title="ดูเกมเพิ่มในหมวดหมู่ Adventure"
-            >Adventure</a
-          >
-          <a class="category-badge" title="ดูเกมเพิ่มในหมวดหมู่ Adventure"
-            >PvP</a
-          >
+          <span id="pdh-category">[category]</span>
         </div>
       </div>
     </header>
     <main class="content" id="detail">
       <section class="description">
         <h2>คำอธิบาย</h2>
-        <p>
+        <p id="phd-desc">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas
           nulla ipsam ratione in quam laborum similique quos animi laudantium
           ullam, quis sequi delectus sint ipsa fugit, error sit deleniti rem.
@@ -73,7 +65,7 @@
       </section>
       <section class="previews">
         <h2>ตัวอย่าง</h2>
-        <div class="preview-image">
+        <div class="preview-image" id="phd-previews">
           <a
             class="preview-image__image"
             data-url="/images/bedwars/bedwars_01.png">
@@ -114,74 +106,8 @@
       <hr />
       <section class="suggestion" id="suggestion">
         <h2>คุณอาจสนใจ</h2>
-        <div class="suggestion__item-container">
-          <a href="/minigame.html?id=1" class="item">
-            <div class="item__image">
-              <img
-                src="/images/bedwars/bedwars_01.png"
-                alt="Bed Wars preview images" />
-            </div>
-            <div class="item__content">
-              <img src="/images/bedwars/logo.png" alt="Bed Wars logo" />
-              <div class="text">
-                <h3>Bed Wars</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Quisquam, quae.
-                </p>
-              </div>
-            </div>
-          </a>
-          <a href="/minigame.html?id=1" class="item">
-            <div class="item__image">
-              <img
-                src="/images/bedwars/bedwars_01.png"
-                alt="Bed Wars preview images" />
-            </div>
-            <div class="item__content">
-              <img src="/images/bedwars/logo.png" alt="Bed Wars logo" />
-              <div class="text">
-                <h3>Bed Wars</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Quisquam, quae.
-                </p>
-              </div>
-            </div> </a
-          ><a href="/minigame.html?id=1" class="item">
-            <div class="item__image">
-              <img
-                src="/images/bedwars/bedwars_01.png"
-                alt="Bed Wars preview images" />
-            </div>
-            <div class="item__content">
-              <img src="/images/bedwars/logo.png" alt="Bed Wars logo" />
-              <div class="text">
-                <h3>Bed Wars</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Quisquam, quae.
-                </p>
-              </div>
-            </div>
-          </a>
-          <a href="/minigame.html?id=1" class="item">
-            <div class="item__image">
-              <img
-                src="/images/bedwars/bedwars_01.png"
-                alt="Bed Wars preview images" />
-            </div>
-            <div class="item__content">
-              <img src="/images/bedwars/logo.png" alt="Bed Wars logo" />
-              <div class="text">
-                <h3>Bed Wars</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Quisquam, quae.
-                </p>
-              </div>
-            </div>
-          </a>
+        <div class="suggestion__item-container" id="phd-suggests">
+          <!-- data pop by js-->
         </div>
       </section>
     </main>
