@@ -5,16 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="images/favicon.png" type="image/png" />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    rel="stylesheet" />
     <title>{name} | Blockman Go minigame</title>
     <link rel="stylesheet" href="css/minigame.css" />
+    <link rel="stylesheet" href="css/base.css">
     <script src="./js/minigame.js" defer></script>
+    <script src="./js/navigation.js" defer></script>
   </head>
 
   <body>
+    <nav class="nav">
+      <ul class="nav-menu">
+        <!--element generate in javascript-->
+      </ul>
+      <button class="menutoggler-btn nav--primary-btn">
+        <span class="material-symbols-outlined">menu</span>
+        เมนู
+      </button>
+      <ul class="nav-toc">
+        <span class="li-selected"></span>
+        <!--element generate in javascript-->
+      </ul>
+      <button class="nav-goup nav--primary-btn">
+        <span class="material-symbols-outlined">expand_less</span>
+      </button>
+    </nav>
     <a class="logo" href="/">
       <img src="images/benny-02.png" alt="logo" width="80" />
     </a>
-    <header>
+    <header id="title">
       <div class="image-banner">
         <img src="/images/bedwars/bedwars_01.png" alt="Bedwars images Banner" />
       </div>
@@ -37,7 +58,7 @@
         </div>
       </div>
     </header>
-    <main class="content">
+    <main class="content" id="detail">
       <section class="description">
         <h2>คำอธิบาย</h2>
         <p>
@@ -91,7 +112,7 @@
         </div>
       </section>
       <hr />
-      <section class="suggestion">
+      <section class="suggestion" id="suggestion">
         <h2>คุณอาจสนใจ</h2>
         <div class="suggestion__item-container">
           <a href="/minigame.html?id=1" class="item">
@@ -128,62 +149,6 @@
               </div>
             </div> </a
           ><a href="/minigame.html?id=1" class="item">
-            <div class="item__image">
-              <img
-                src="/images/bedwars/bedwars_01.png"
-                alt="Bed Wars preview images" />
-            </div>
-            <div class="item__content">
-              <img src="/images/bedwars/logo.png" alt="Bed Wars logo" />
-              <div class="text">
-                <h3>Bed Wars</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Quisquam, quae.
-                </p>
-              </div>
-            </div>
-          </a>
-          <a href="/minigame.html?id=1" class="item">
-            <div class="item__image">
-              <img
-                src="/images/bedwars/bedwars_01.png"
-                alt="Bed Wars preview images" />
-            </div>
-            <div class="item__content">
-              <img src="/images/bedwars/logo.png" alt="Bed Wars logo" />
-              <div class="text">
-                <h3>Bed Wars</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Quisquam, quae.
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-      </section>
-      <section class="in-this-cat">
-        <h2>เกมอื่นในหมวดหมู่นี้</h2>
-        <div class="in-this-cat__item-container">
-          <a href="/minigame.html?id=1" class="item">
-            <div class="item__image">
-              <img
-                src="/images/bedwars/bedwars_01.png"
-                alt="Bed Wars preview images" />
-            </div>
-            <div class="item__content">
-              <img src="/images/bedwars/logo.png" alt="Bed Wars logo" />
-              <div class="text">
-                <h3>Bed Wars</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Quisquam, quae.
-                </p>
-              </div>
-            </div>
-          </a>
-          <a href="/minigame.html?id=1" class="item">
             <div class="item__image">
               <img
                 src="/images/bedwars/bedwars_01.png"

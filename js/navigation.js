@@ -78,6 +78,26 @@ let toc = [
       ],
     ],
   ],
+  [
+    '/minigame.html',
+    [
+      [
+        '<span class="material-symbols-outlined nav-li-icon">image</span>',
+        'ชื่อเกม',
+        '#title',
+      ],
+      [
+        '<span class="material-symbols-outlined nav-li-icon">info</span>',
+        'รายลัเอียด',
+        '#detail',
+      ],
+      [
+        '<span class="material-symbols-outlined nav-li-icon">star</span>',
+        'คุณอาจสนใจ',
+        '#register',
+      ],
+    ],
+  ],
 ]
 let menupath = [
   {

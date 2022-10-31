@@ -1,5 +1,11 @@
 @import './base.scss';
 
+* {
+  padding: 0;
+  margin: 0;
+  transition: all ease 0.2s;
+}
+
 header {
   position: relative;
 
@@ -35,9 +41,11 @@ header {
   }
 
   .title-text {
+    margin-top: 16px;
     margin-left: calc(88px + 20vw);
     position: relative;
     h1 {
+      margin-top: 16px;
       display: inline-block;
       color: $black;
       font-size: 4rem;
@@ -73,6 +81,7 @@ header {
 }
 
 main {
+  margin-top: 16px;
   margin-left: calc(98px + 20vw);
   margin-right: 64px;
 
@@ -223,6 +232,7 @@ main {
     margin: auto;
     transform: translateY(-100px);
     h1{
+      margin: 16px;
       position: relative;
       transform: translate(0);
       top: 0;
