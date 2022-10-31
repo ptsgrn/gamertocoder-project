@@ -710,6 +710,31 @@ body {
   padding-left: 4px;
 }
 
+.section-require {
+  width: 60rem;
+  max-width: 90vw;
+  margin: 64px auto auto auto;
+}
+
+.section-require h1 {
+  font-size: 2.5rem;
+  letter-spacing: 4px;
+  color: #fed766;
+}
+
+.section-require__content {
+  padding: 8px;
+  color: white;
+}
+
+.section-require__content h2 {
+  padding-bottom: 8px;
+}
+
+.section-require__content p {
+  padding-bottom: 4px;
+}
+
 @media screen and (max-width: 768px) {
   .hero-header__overlay-text .download-button-group {
     -ms-grid-columns: 1fr;

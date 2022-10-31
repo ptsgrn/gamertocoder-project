@@ -95,6 +95,27 @@ body {
   }
 }
 
+.section-require{
+  width: 60rem;
+  max-width: 90vw;
+  margin: 64px auto auto auto;
+  h1{
+    font-size: 2.5rem;
+    letter-spacing: 4px;
+    color: $yellow;
+  }
+  &__content{
+    padding: 8px;
+    color: white;
+    h2{
+      padding-bottom: 8px;
+    }
+    p{
+      padding-bottom: 4px;
+    }
+  }
+}
+
 @media screen and (max-width: $breakpoint-tablet) {
   .hero-header {
     &__overlay-text {

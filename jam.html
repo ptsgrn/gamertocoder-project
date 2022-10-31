@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="images/favicon.png" type="image/png" />
     <link rel="stylesheet" href="./css/base.css" />
     <link rel="stylesheet" href="./css/jam.css">
+    <link rel="stylesheet" href="./css/popup.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <script src="js/navigation.js" defer></script>
     <title>Blockman Go | BlockJam</title>
@@ -99,7 +100,7 @@
             <p>มุลค่ารวม : 100,000 บาท</p>
         </div>
     </section>
-    <section class="section-detail",id="detail">
+    <section class="section-detail" id="detail">
         <h1>DETAIL</h1>
         <div class="section-detail__container">
             <p>BlockJam เป็นกิจกรรมที่จะนำเกมจากผู้สร้างหลายหลายคนทั่วทุกมุมโลกและนำเกมที่สร้างมาแข่งขันชิงรางวัลจำนวนรวม 100,000 บาทโดยที่จะมีผู้ชนะเพียง 10 คนเดียว</p>
@@ -121,15 +122,16 @@
         <h1>REGISTER</h1>
         <form action="" class="section-register__form">
             <div class="section-register__form__inline">
-                <input type="text" placeholder="First Name">
-                <input type="text" placeholder="LastName">
+                <input type="text" placeholder="First Name" id="fname">
+                <input type="text" placeholder="LastName" id="lname">
             </div>
             <div class="section-register__form__fullline">
-                <input type="email" placeholder="Emails">
-                <input type="text" placeholder="Phone">
-                <input type="number" placeholder="Age">
+                <input type="email" placeholder="Emails" id="email">
+                <input type="text" placeholder="Phone" id="phone">
+                <input type="number" placeholder="Age" id="age">
             </div>
         </form>
+        <button class="secondary-btn" id="summit"><span class="material-symbols-outlined">send</span>ส่ง</button>
     </section>
     <footer>
         <span class="footer__credits">

@@ -49,7 +49,12 @@ let toc = [
       [
         '<span class="material-symbols-outlined nav-li-icon">Download</span>',
         'Download',
-        '#desktop',
+        '#download',
+      ],
+      [
+        '<span class="material-symbols-outlined nav-li-icon">devices_other</span>',
+        'Requirement',
+        '#requirement',
       ],
     ],
   ],
@@ -57,9 +62,19 @@ let toc = [
     '/jam.html',
     [
       [
+        '<span class="material-symbols-outlined nav-li-icon">payments</span>',
+        'Prize',
+        '#prize',
+      ],
+      [
         '<span class="material-symbols-outlined nav-li-icon">info</span>',
-        'Info',
-        '#desktop',
+        'Detail',
+        '#detail',
+      ],
+      [
+        '<span class="material-symbols-outlined nav-li-icon">how_to_reg</span>',
+        'Register',
+        '#register',
       ],
     ],
   ],

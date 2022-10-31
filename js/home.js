@@ -162,7 +162,7 @@ async function anoucement(){
 
   function setColor(index){
     for (let i=0;i < button.length;i++){
-      button[index].classList.remove('active')
+      button[i].classList.remove('active')
     }
     button[index].classList.add('active')
   }
