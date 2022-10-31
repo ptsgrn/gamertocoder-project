@@ -37,7 +37,6 @@ header {
   .title-text {
     margin-left: calc(88px + 20vw);
     position: relative;
-
     h1 {
       display: inline-block;
       color: $black;
@@ -55,16 +54,18 @@ header {
         color: $white;
       }
       .category-badge {
-        color: $white;
-        text-decoration: underline;
-
+        color: var(--black);
+        background: white;
+        text-decoration: none;
+        padding: 0 8px 0 8px;
+        margin-left: 4px;
+        border-radius: 64px;
         &:not(:last-child):after {
           content: ',';
         }
 
         &:hover {
-          color: $yellow;
-          text-decoration-thickness: 4px;
+          
         }
       }
     }
@@ -201,5 +202,41 @@ main {
         display: none;
       }
     }
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  header{
+    display: block;
+   .logo-image{
+    position: relative;
+    margin: auto;
+    left: 0;
+    transform: translate(0, -50%);
+    img{
+      max-width: 150px;
+      object-fit:fill;
+    }
+   }
+   .title-text{
+    text-align: center;
+    margin: auto;
+    transform: translateY(-100px);
+    h1{
+      position: relative;
+      transform: translate(0);
+      top: 0;
+    }
+    .category{
+      padding: 0;
+    } 
+   }
+
+  }
+  main{
+    transform: translateY(-20px);
+    width: 60rem;
+    max-width: 80vw;
+    margin:0 auto auto auto;
   }
 }
