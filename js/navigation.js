@@ -107,7 +107,7 @@ let menupath = [
 menuMenipulate(true)
 checkTop()
 for (var i = 0; i < toc.length; i++) {
-  if (currentpath == "/"){currentpath="/index.html"}
+  if (currentpath.slice(currentpath.length-1,currentpath.length) == "/"){currentpath="/index.html"}
   if (currentpath.indexOf(toc[i][0]) > -1) {
     toc[i][1].forEach(item => {
       let a = document.createElement('a')
