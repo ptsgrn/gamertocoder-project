@@ -25,26 +25,6 @@ Or with Visual studio code:
 
 > Note: Note, Even thought this is not the main repo, you can still submit your code to this repo. And we will merge it to the main repo at Gamer to coder's Gitlab instance. for your convenience.
 
-## Setup code formatter
-
-We use [Prettier](https://prettier.io/) to format our code. You can install it by using this command:
-
-```bash
-# after clone this repo, run:
-npm i
-```
-
-And you're good to go! Husky will run Prettier before you commit your code automatically. If you want to run Prettier manually, you can use this command:
-
-```bash
-npm run format
-```
-
-Also you can use Prettier's extension for your IDE. [Here's the list of supported IDE](https://prettier.io/docs/en/editors.html).
-
-> **Note**
-> I will remove this section after we finish the project. And also all other file that related to Prettier or npm.
-
 ## List of available API endpoints
 
 - https://gamertocoder.garena.co.th/api/assets
@@ -70,9 +50,6 @@ This repo must be structured like this:
     ├── image.png     - Image file
     └── other.jpg     - Other image file (as many as you want)
 ```
-
-> **Warning**
-> The judge will check your project structure and will not accept your submission if it is not structured like this.
 
 ## Code styles
 
@@ -160,7 +137,3 @@ Don't worry if you cannot remember all of this. Try using this extension:
 - Use `const` and `let` instead of `var`.
 - For variable name, use `camelCase`.
 - Use jsdoc for function documentation and intelisense.
-
-### code formatting
-
-for sake of readability we will use prettier to format our code.
