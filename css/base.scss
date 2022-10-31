@@ -8,6 +8,7 @@
 
 // variable
 $yellow: rgb(254, 215, 102);
+$white: #efefef;
 $yellow-700: #564922;
 $yellow-900: #25200e;
 $yellow-secondary: rgba(254, 215, 102, 0.5);
@@ -27,6 +28,7 @@ $gray-800: #505050;
 // breakpoints
 $breakpoint-tablet: 768px;
 :root {
+  --white: #efefef;
   --yellow: rgb(254, 215, 102);
   --yellow-700: #564922;
   --yellow-secondary: rgba(254, 215, 102, 0.5);
@@ -100,7 +102,6 @@ footer {
   background-color: var(--yellow);
   color: var(--black20);
 }
-
 
 .logo {
   position: fixed;
