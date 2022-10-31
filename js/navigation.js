@@ -68,7 +68,7 @@ let toc = [
       ],
       [
         '<span class="material-symbols-outlined nav-li-icon">info</span>',
-        'รายลัเอียด',
+        'รายละเอียด',
         '#detail',
       ],
       [
@@ -95,6 +95,16 @@ let toc = [
         '<span class="material-symbols-outlined nav-li-icon">star</span>',
         'คุณอาจสนใจ',
         '#register',
+      ],
+    ],
+  ],
+  [
+    '/minigames.html',
+    [
+      [
+        '<span class="material-symbols-outlined nav-li-icon">image</span>',
+        'มินิเกมทั้งหมด',
+        '#title',
       ],
     ],
   ],

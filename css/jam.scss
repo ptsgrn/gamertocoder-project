@@ -193,10 +193,18 @@
             background-color: $blue-300;
         }
         .card{
+            position: relative;
             scroll-snap-align: center;
             border-radius: 12px;
             padding: 16px;
             width: 200px;
+            svg{
+                position: absolute;
+                width: 50%;
+                left: 0;
+                top: 0;
+                opacity: .2;
+            }
         }
     }
     &__description{

@@ -863,10 +863,19 @@ nav .nav--primary-btn:hover {
 }
 
 .section-prize__container .card {
+  position: relative;
   scroll-snap-align: center;
   border-radius: 12px;
   padding: 16px;
   width: 200px;
+}
+
+.section-prize__container .card svg {
+  position: absolute;
+  width: 50%;
+  left: 0;
+  top: 0;
+  opacity: .2;
 }
 
 .section-prize__description {
