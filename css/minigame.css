@@ -597,9 +597,7 @@ header .title-text .category .category-badge {
   margin-left: 4px;
   border-radius: 64px;
 }
-header .title-text .category .category-badge:not(:last-child):after {
-  content: ",";
-}
+
 main {
   margin-top: 16px;
   margin-left: calc(98px + 20vw);
