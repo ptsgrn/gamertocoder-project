@@ -878,10 +878,10 @@ main section .suggestion__item-container::-webkit-scrollbar {
             transform: translateY(-100px);
   }
   header .title-text h1 {
-    margin: 16px;
+    margin: 32px;
     position: relative;
-    -webkit-transform: translate(0);
-            transform: translate(0);
+    -webkit-transform: translate(0, 16px);
+            transform: translate(0, 16px);
     top: 0;
   }
   header .title-text .category {
