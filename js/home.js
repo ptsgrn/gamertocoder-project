@@ -86,7 +86,13 @@ async function banner() {
   let data = await getGameApi('https://gamertocoder.garena.co.th/api/minigames')
   let position = 0
   let featuredSlide = ``
-  console.log(data)
+  for (let i=0;i==data.length;i++){
+    data[i] = data[i+1]
+  }
+  data[0] = {
+    name : "BlockJam",
+    description : "มาเข้าร่วม Blockjam เพื่อลุ้นรับเงินจำนวน 100,000 บาท"
+  }
 
 
   for (let i = 0; i < data.length; i++) {
@@ -110,7 +116,7 @@ async function banner() {
               <div class="title__right">
               <button class="primary-btn">
                     <span class="material-symbols-outlined">open_in_new</span
-                    >JOIN
+                    >OPEN
               </button>
             </div>
         </div>
@@ -142,6 +148,13 @@ banner()
 // anoucement
 async function anoucement(){
   let data = [
+    {
+      img:"images/banner-use.png",
+      type:"events",
+      href:"",
+      name:"BlockJam",
+      description:"ส่งเกมของคุณเข้ารวม Blockjam ได้ลยตอนนี.."
+    },
     {
       img:'https://resource.blockmanmobile.com/web/BMGOfficialWebsite/News/Garena/LogoKv.png',
       type:'news',
@@ -236,7 +249,7 @@ async function anoucement(){
   })
   button[2].addEventListener('click',()=>{
     setColor(2)
-    content.innerHTML = query('event')
+    content.innerHTML = query('events')
   })
   button[3].addEventListener('click',()=>{
     setColor(3)

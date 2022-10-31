@@ -740,6 +740,13 @@ a {
   font-size: 24px;
 }
 
+.main-title .div-maintitle img {
+  position: relative;
+  left: 100%;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
 .main-title .div-maintitle h1 {
   text-align: right;
   font-weight: 600;
@@ -782,6 +789,9 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1023,6 +1033,12 @@ a {
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
+  }
+  .main-title .div-maintitle img {
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
   .main-title .div-maintitle h1 {
     text-align: center;

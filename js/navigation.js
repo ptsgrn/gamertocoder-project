@@ -16,11 +16,10 @@ let menuicon = document.querySelector(
 
 let menustate = true
 
-let initalpath = 'Home'
-let currentpath = 'Home'
+let currentpath = window.location.pathname.toString()
 let toc = [
   [
-    'Home',
+    "/index.html",
     [
       [
         '<span class="material-symbols-outlined nav-li-icon">Home</span>',
@@ -45,31 +44,31 @@ let toc = [
     ],
   ],
   [
-    'Download',
+    '/download.html',
     [
       [
-        '<span class="material-symbols-outlined nav-li-icon">desktop</span>',
-        'Desktop',
+        '<span class="material-symbols-outlined nav-li-icon">Download</span>',
+        'Download',
         '#desktop',
-      ],
-      [
-        '<span class="material-symbols-outlined nav-li-icon">mobile</span>',
-        'Mobile',
-        '#mobile',
       ],
     ],
   ],
 ]
 let menupath = [
   {
+    icon: '<img src="images/batch-1.png"/>',
+    text: 'Blockjam',
+    href: '/',
+  },
+  {
     icon: '<span class="material-symbols-outlined nav-li-icon">Home</span>',
     text: 'Home',
-    href: '/home',
+    href: '/index.html',
   },
   {
     icon: '<span class="material-symbols-outlined nav-li-icon">Download</span>',
     text: 'Download',
-    href: '/download',
+    href: '/download.html',
   },
   {
     icon: '<span class="material-symbols-outlined nav-li-icon">Forum</span>',
@@ -108,7 +107,8 @@ let menupath = [
 menuMenipulate(true)
 checkTop()
 for (var i = 0; i < toc.length; i++) {
-  if (currentpath == toc[i][0]) {
+  if (currentpath.indexOf('/')>-1){currentpath="/index.html"}
+  if (currentpath.indexOf(toc[i][0]) > -1) {
     toc[i][1].forEach(item => {
       let a = document.createElement('a')
       a.innerHTML = `${item[0]} ${item[1]}`

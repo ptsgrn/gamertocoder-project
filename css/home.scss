@@ -144,6 +144,11 @@ a {
       }
     }
 
+    img{
+      position: relative;
+      left: 100%;
+      transform: translateX(-100%);
+    }
     h1 {
       text-align: right;
       font-weight: 600;
@@ -182,6 +187,7 @@ a {
           bottom: 0;
           padding: 40px;
           display: flex;
+          justify-content: space-between;
           align-items: center;
 
           .title__left {
@@ -385,6 +391,11 @@ a {
       left: 50%;
       transform: translate(-50%, -50%);
 
+      img{
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+      }
       h1 {
         text-align: center;
       }
