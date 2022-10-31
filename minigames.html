@@ -8,28 +8,30 @@
     <link rel="stylesheet" href="/css/base.css" />
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="/css/minigames.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet" />
     <script src="js/navigation.js" defer></script>
-    <link rel="stylesheet" href="css/base.css">
-    
+    <script src="js/minigames.js" defer></script>
+    <link rel="stylesheet" href="css/base.css" />
   </head>
   <body>
     <nav class="nav">
       <ul class="nav-menu">
-          <!--element generate in javascript-->
+        <!--element generate in javascript-->
       </ul>
       <button class="menutoggler-btn nav--primary-btn">
-          <span class="material-symbols-outlined">menu</span>
-          เมนู
+        <span class="material-symbols-outlined">menu</span>
+        เมนู
       </button>
       <ul class="nav-toc">
-          <span class="li-selected"></span>
-          <!--element generate in javascript-->
+        <span class="li-selected"></span>
+        <!--element generate in javascript-->
       </ul>
       <button class="nav-goup nav--primary-btn">
-          <span class="material-symbols-outlined">expand_less</span>
+        <span class="material-symbols-outlined">expand_less</span>
       </button>
-  </nav>
+    </nav>
     <a class="logo" href="/">
       <img src="images/benny-02.png" alt="logo" width="80" />
     </a>
@@ -66,7 +68,7 @@
     </header>
     <main>
       <h2>มินิเกมทั้งหมด</h2>
-      <div class="all-game__container">
+      <div class="all-game__container" id="phd-all-game">
         <a href="/minigame.html?id=1" class="item">
           <div class="item__image">
             <img
