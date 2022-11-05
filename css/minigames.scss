@@ -1,0 +1,181 @@
+@import './base.scss';
+
+
+* {
+  padding: 0;
+  margin: 0;
+  transition: all ease 0.2s;
+}
+
+.item {
+  display: inline-block;
+  width: 350px;
+  height: 276px;
+  overflow: hidden;
+  padding: 16px;
+  border: 2px solid $yellow;
+  scroll-snap-align: start;
+  border-radius: 28px;
+  color: $white;
+  text-decoration: none;
+
+  &__image {
+    height: 120px;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+
+    img {
+      // display: none;
+      object-fit: fill;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__content {
+    padding: 12px 0;
+    display: flex;
+    flex-direction: row;
+
+    img {
+      display: inline;
+      width: 100px;
+      height: 100px;
+      border-radius: 12px;
+    }
+
+    .text {
+      margin-left: 16px;
+
+      h3 {
+        font-size: 2rem;
+        display: inline;
+        color: $yellow;
+      }
+
+      p {
+        display: -webkit-box;
+        max-width: 100%;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+header {
+  overflow: hidden;
+  position: relative;
+  height: 500px;
+
+  .bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0, black, transparent);
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+  }
+
+  .content {
+    position: absolute;
+    bottom: 24px;
+    transform: translateY(-48px);
+    left: 24px;
+
+    .title {
+      display: flex;
+      width: 100%;
+      margin-bottom: 16px;
+
+      img {
+        width: 200px;
+        height: 200px;
+        border-radius: 25px;
+      }
+
+      &__text {
+        position: relative;
+        left: 248px;
+
+        h1 {
+          color: white;
+          font-size: 32px;
+          padding: 16px 0 16px 0;
+        }
+
+        .badge {
+          color: $yellow;
+          padding: 0 32px 0 16px;
+          border-radius: 64px;
+          background-color: black;
+          fill: $yellow;
+          font-size: 24px;
+          display: flex;
+          align-items: center;
+
+        }
+
+        .category {
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+main {
+  width: 70rem;
+  max-width: 90vw;
+  padding: 16px;
+  margin: 0 auto;
+
+  h2 {
+    font-size: 3rem;
+    color: $yellow;
+    margin: 0;
+  }
+
+  .all-game__container {
+    align-items: center;
+    justify-content: center;
+    margin: 28px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  header {
+    img {}
+
+    .content {
+      position: absolute;
+      bottom: 24px;
+      transform: translate(-100%, -50%);
+      left: 50%;
+
+
+      .title {
+        margin-bottom: 8px;
+
+        &__text {
+          .badge {}
+
+          .category {}
+        }
+      }
+    }
+  }
+}
