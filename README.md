@@ -1,6 +1,6 @@
 # Gamertocoder Theme Team (#628)
 
-This is a repo for summission in [Gamer to coder](https://gamertocoder.garena.co.th/) competition.
+This is a repo for submission in [Gamer to coder](https://gamertocoder.garena.co.th/) competition.
 
 ## Clone this repo
 
